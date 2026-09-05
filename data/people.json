@@ -1,0 +1,33 @@
+{
+  "categories": [
+    { "key": "chief_scientist", "label": "Chief Scientist / Professor" },
+    { "key": "senior_researcher", "label": "Senior Researchers" },
+    { "key": "junior_researcher", "label": "Junior Researchers" },
+    { "key": "postdoc", "label": "Postdoctoral Researchers" },
+    { "key": "research_assistant", "label": "Research Assistants & Data Analysts" }
+  ],
+  "people": [
+    { "slug": "erma-yulihastin", "name": "Prof. Dr. Erma Yulihastin, S.Si., M.Si.", "role": "Chief Scientist / Group Leader", "category": "chief_scientist", "degreeNote": "Professor Researcher", "photo": "erma-yulihastin.jpg" },
+    { "slug": "furqon-azis-ismail", "name": "M. Furqon Azis Ismail, S.Si., M.Sc., Ph.D.", "role": "Senior Researcher", "category": "senior_researcher", "degreeNote": null, "photo": "furqon-azis-ismail.jpg" },
+    { "slug": "abdul-basit", "name": "Dr.rer.nat. Abdul Basit, S.Si., M.App.Sc.", "role": "Senior Researcher", "category": "senior_researcher", "degreeNote": null, "photo": "abdul-basit.jpg" },
+    { "slug": "fiolenta-marpaung", "name": "Fiolenta Marpaung, S.Si., M.Sc., Ph.D.", "role": "Senior Researcher", "category": "senior_researcher", "degreeNote": null, "photo": "fiolenta-marpaung.jpg" },
+    { "slug": "suaydhi", "name": "Suaydhi, M.Sc.", "role": "Senior Researcher", "category": "senior_researcher", "degreeNote": "Doctoral Student (S3 Australia)", "photo": "suaydhi.jpg" },
+    { "slug": "eka-putri-wulandari", "name": "Eka Putri Wulandari, S.Si., M.Si.", "role": "Junior Researcher", "category": "junior_researcher", "degreeNote": null, "photo": "eka-putri-wulandari.jpg" },
+    { "slug": "rahaden-bagas-hatmaja", "name": "Rahaden Bagas Hatmaja, S.Si., M.Si.", "role": "Junior Researcher", "category": "junior_researcher", "degreeNote": "Doctoral Student (S3 USA)", "photo": "rahaden-bagas-hatmaja.jpg" },
+    { "slug": "amalia-nurlatifah", "name": "Amalia Nurlatifah, S.Si., M.T.", "role": "Junior Researcher", "category": "junior_researcher", "degreeNote": "Doctoral Student (S3 UK)", "photo": "amalia-nurlatifah.jpg" },
+    { "slug": "erlin-beliyana", "name": "Dr. Erlin Beliyana, S.Si., M.Si.", "role": "Postdoctoral Researcher", "category": "postdoc", "degreeNote": null, "photo": "erlin-beliyana.jpg" },
+    { "slug": "inovasita-alifdini", "name": "Dr.rer.nat. Inovasita Alifdini, S.Kel., M.Phil.", "role": "Postdoctoral Researcher", "category": "postdoc", "degreeNote": null, "photo": "inovasita-alifdini.jpg" },
+    { "slug": "amirotul-bahiyah", "name": "Dr. Amirotul Bahiyah, S.Si., M.Sc.", "role": "Postdoctoral Researcher", "category": "postdoc", "degreeNote": "Candidate", "photo": "amirotul-bahiyah.jpg" },
+    { "slug": "gandhi-napitupulu", "name": "Dr. Gandhi Napitupulu, S.Si., M.Sc.", "role": "Postdoctoral Researcher", "category": "postdoc", "degreeNote": "Candidate", "photo": "gandhi-napitupulu.jpg" },
+    { "slug": "narizka-nanda-purwadani", "name": "Narizka Nanda Purwadani, S.Si., M.Si.", "role": "Research Assistant", "category": "research_assistant", "degreeNote": "Doctoral Student (S3 ITB)", "photo": "narizka-nanda-purwadani.jpg" },
+    { "slug": "alya-fitri-syalsabilla", "name": "Alya Fitri Syalsabilla, S.Stat., M.Stat.", "role": "Research Assistant", "category": "research_assistant", "degreeNote": "Doctoral Student (S3 Sains Kebumian ITB)", "photo": "alya-fitri-syalsabilla.jpg" },
+    { "slug": "syifa-alifia-azzahra", "name": "Syifa Alifia Azzahra, S.Si.", "role": "Research Assistant", "category": "research_assistant", "degreeNote": "Master Student (S2 Fisika ITB)", "photo": "syifa-alifia-azzahra.jpg" },
+    { "slug": "afiq-mahasin", "name": "Afiq Mahasin, S.Si.", "role": "Research Assistant", "category": "research_assistant", "degreeNote": "Master Student (S2 Fisika ITB)", "photo": "afiq-mahasin.jpg" },
+    { "slug": "sanaullah-zehri", "name": "Sanaullah Zehri, S.Pd.", "role": "Research Assistant", "category": "research_assistant", "degreeNote": "Master Student (S2 Fisika ITB)", "photo": "sanaullah-zehri.jpg" },
+    { "slug": "ikbal-nur-dian-triatmojo", "name": "M. Ikbal Nur Dian Triatmojo, S.Si.", "role": "Research Assistant", "category": "research_assistant", "degreeNote": "Master Student (S2 Geodesi & Geomatika ITB) — Cand.", "photo": "ikbal-nur-dian-triatmojo.jpg" }
+  ],
+  "extraPrograms": [
+    { "title": "Visiting Professor", "description": "Program kunjungan profesor tamu dari institusi mitra untuk kolaborasi riset dan joint advisory." },
+    { "title": "Student Exchange Opportunity", "description": "Kesempatan pertukaran mahasiswa untuk internship, tugas akhir, hingga riset bersama, termasuk akses ke fasilitas HPC, Radar SANTANU, dan Kapal Riset Baruna Jaya." }
+  ]
+}

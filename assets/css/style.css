@@ -1,0 +1,305 @@
+/* =========================================================
+   IALVI / ASICLIVAR Research Group — Design Tokens
+   Palette:
+     --deep-ocean : #16324F  (headline, navbar bg on scroll)
+     --sea-blue   : #2C5F8A  (primary accent, links, buttons)
+     --sky        : #6FA3C7  (secondary accent, tags)
+     --mist       : #EAF2F8  (soft section background)
+     --foam       : #FFFFFF  (cards, base background)
+     --ink        : #1F2A37  (body text)
+     --slate      : #5B6B7B  (muted text / captions)
+   Type:
+     Headings : 'Spectral', a literary serif — gives the page the register
+                of a scientific journal / earth-sciences faculty page
+     Body/UI  : 'Inter' — clean, highly legible sans for data-dense pages
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --deep-ocean: #16324F;
+  --sea-blue: #2C5F8A;
+  --sky: #6FA3C7;
+  --mist: #EAF2F8;
+  --foam: #FFFFFF;
+  --ink: #1F2A37;
+  --slate: #5B6B7B;
+  --border: #D7E4EE;
+
+  --font-head: 'Spectral', Georgia, serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+
+  --radius: 10px;
+  --max-width: 1180px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--foam);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-head);
+  color: var(--deep-ocean);
+  line-height: 1.25;
+  margin: 0 0 0.5em;
+}
+
+h1 { font-size: 2.6rem; font-weight: 600; }
+h2 { font-size: 1.9rem; font-weight: 600; }
+h3 { font-size: 1.3rem; font-weight: 600; }
+
+p { max-width: 68ch; color: var(--ink); }
+
+a { color: var(--sea-blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+img { max-width: 100%; display: block; }
+
+/* ---------- NAVBAR ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--foam);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--deep-ocean);
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+}
+
+.navbar__brand img { height: 38px; width: auto; }
+
+.navbar__brand-text small {
+  display: block;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.72rem;
+  color: var(--slate);
+  letter-spacing: 0.02em;
+}
+
+.navbar__toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: var(--deep-ocean);
+  cursor: pointer;
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar__menu a {
+  color: var(--ink);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 6px 2px;
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.navbar__menu a:hover,
+.navbar__menu a.is-active {
+  color: var(--sea-blue);
+  border-bottom-color: var(--sea-blue);
+}
+
+@media (max-width: 860px) {
+  .navbar__toggle { display: block; }
+  .navbar__menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--foam);
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 8px 24px 16px;
+    display: none;
+  }
+  .navbar__menu.is-open { display: flex; }
+  .navbar__menu li { width: 100%; }
+  .navbar__menu a { display: block; padding: 10px 0; border-bottom: none; }
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  background: linear-gradient(180deg, var(--mist) 0%, var(--foam) 100%);
+  padding: 72px 0 56px;
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero__eyebrow {
+  color: var(--sea-blue);
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.hero__image {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(22, 50, 79, 0.14);
+}
+
+@media (max-width: 860px) {
+  .hero__grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- SECTION ---------- */
+.section { padding: 64px 0; }
+.section--muted { background: var(--mist); }
+.section__head { max-width: 680px; margin-bottom: 36px; }
+
+/* ---------- PEOPLE GRID ---------- */
+.people-category { margin-bottom: 56px; }
+
+.people-category__title {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
+  margin-bottom: 24px;
+}
+
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 28px;
+}
+
+.person-card {
+  background: var(--foam);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.person-card:hover {
+  box-shadow: 0 10px 24px rgba(22, 50, 79, 0.10);
+  transform: translateY(-2px);
+}
+
+.person-card__photo {
+  aspect-ratio: 4 / 5;
+  background: var(--mist) center/cover no-repeat;
+  background-image: var(--photo-url);
+}
+
+.person-card__body { padding: 14px 16px 18px; }
+
+.person-card__name {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 0.98rem;
+  color: var(--deep-ocean);
+  margin: 0 0 4px;
+}
+
+.person-card__role {
+  font-size: 0.82rem;
+  color: var(--sea-blue);
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.person-card__note {
+  font-size: 0.78rem;
+  color: var(--slate);
+  margin: 0;
+}
+
+/* ---------- PROGRAM BOX (Visiting Professor / Exchange) ---------- */
+.program-boxes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 12px;
+}
+
+.program-box {
+  background: var(--deep-ocean);
+  color: var(--foam);
+  border-radius: var(--radius);
+  padding: 28px;
+}
+
+.program-box h3 { color: var(--foam); }
+.program-box p { color: #CFE0EE; margin: 0; }
+
+@media (max-width: 700px) {
+  .program-boxes { grid-template-columns: 1fr; }
+}
+
+/* ---------- FOOTER ---------- */
+.site-footer {
+  background: var(--deep-ocean);
+  color: #CFE0EE;
+  padding: 40px 0 24px;
+  margin-top: 48px;
+}
+
+.site-footer a { color: #CFE0EE; }
+.site-footer h4 { color: var(--foam); font-size: 1rem; }
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.15);
+  padding-top: 16px;
+  font-size: 0.82rem;
+  color: #9FB7C9;
+}
+
+@media (max-width: 700px) {
+  .footer-grid { grid-template-columns: 1fr; }
+}
