@@ -130,7 +130,7 @@ include 'includes/header.php';
 <section class="section section--muted">
   <div class="container">
     <div class="section__head">
-      <h2>News &amp; Seminar</h2>
+      <h2>News &amp; Events</h2>
       <p>Update terbaru seputar kegiatan diskusi dan pengembangan kapasitas
          di IALVI / ASICLIVAR.</p>
     </div>
