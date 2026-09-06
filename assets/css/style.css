@@ -455,7 +455,7 @@ img {
 }
 
 .dss-card__image {
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 18 / 10;
   border-radius: var(--radius);
   background: var(--mist) center/cover no-repeat;
   box-shadow: 0 12px 28px rgba(22, 50, 79, 0.1);

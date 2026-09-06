@@ -96,7 +96,7 @@ include 'includes/header.php';
   <div class="container">
     <div class="leader__grid">
       <div class="leader__photo"
-           style="background-image: url('assets/img/people/erma-yulihastin.jpg');"></div>
+           style="background-image: url('assets/img/people/erma-yulihastin.png');"></div>
       <div>
         <p class="leader__quote">&ldquo;Benua maritim ekuator menyimpan kompleksitas
            yang luar biasa &mdash; tugas kami adalah mengubah kompleksitas itu
