@@ -39,7 +39,7 @@ include 'includes/header.php';
         <?php foreach ($members as $person): ?>
           <article class="person-card">
             <div class="person-card__photo"
-                 style="--photo-url: url('assets/img/people/<?php echo htmlspecialchars($person['photo']); ?>');">
+                 style="--photo-url: url('/assets/img/people/<?php echo htmlspecialchars($person['photo']); ?>');">
             </div>
             <div class="person-card__body">
               <h3 class="person-card__name"><?php echo htmlspecialchars($person['name']); ?></h3>

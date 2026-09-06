@@ -18,7 +18,7 @@ $people_categories = [
 
 // ----------------------------------------------------------------------
 // 2. DAFTAR PERSONEL
-//    field 'photo' mengacu ke assets/img/people/<slug>.jpg
+//    field 'photo' mengacu ke assets/img/people/<slug>.png
 //    field 'degree_note' = keterangan studi lanjut (S2/S3) jika ada
 // ----------------------------------------------------------------------
 $people = [
@@ -30,7 +30,7 @@ $people = [
         'role'        => 'Chief Scientist / Group Leader',
         'category'    => 'chief_scientist',
         'degree_note' => 'Professor Researcher',
-        'photo'       => 'erma-yulihastin.jpg',
+        'photo'       => 'erma-yulihastin.png',
     ],
 
     // --- Senior Researchers ---
@@ -40,7 +40,7 @@ $people = [
         'role'        => 'Senior Researcher',
         'category'    => 'senior_researcher',
         'degree_note' => null,
-        'photo'       => 'furqon-azis-ismail.jpg',
+        'photo'       => 'furqon-azis-ismail.png',
     ],
     [
         'slug'        => 'abdul-basit',
@@ -48,7 +48,7 @@ $people = [
         'role'        => 'Senior Researcher',
         'category'    => 'senior_researcher',
         'degree_note' => null,
-        'photo'       => 'abdul-basit.jpg',
+        'photo'       => 'abdul-basit.png',
     ],
     [
         'slug'        => 'fiolenta-marpaung',
@@ -56,7 +56,7 @@ $people = [
         'role'        => 'Senior Researcher',
         'category'    => 'senior_researcher',
         'degree_note' => null,
-        'photo'       => 'fiolenta-marpaung.jpg',
+        'photo'       => 'fiolenta-marpaung.png',
     ],
     [
         'slug'        => 'suaydhi',
@@ -64,7 +64,7 @@ $people = [
         'role'        => 'Senior Researcher',
         'category'    => 'senior_researcher',
         'degree_note' => 'Doctoral Student (S3 Australia)',
-        'photo'       => 'suaydhi.jpg',
+        'photo'       => 'suaydhi.png',
     ],
 
     // --- Junior Researchers ---
@@ -74,7 +74,7 @@ $people = [
         'role'        => 'Junior Researcher',
         'category'    => 'junior_researcher',
         'degree_note' => null,
-        'photo'       => 'eka-putri-wulandari.jpg',
+        'photo'       => 'eka-putri-wulandari.png',
     ],
     [
         'slug'        => 'rahaden-bagas-hatmaja',
@@ -82,7 +82,7 @@ $people = [
         'role'        => 'Junior Researcher',
         'category'    => 'junior_researcher',
         'degree_note' => 'Doctoral Student (S3 USA)',
-        'photo'       => 'rahaden-bagas-hatmaja.jpg',
+        'photo'       => 'rahaden-bagas-hatmaja.png',
     ],
     [
         'slug'        => 'amalia-nurlatifah',
@@ -90,7 +90,7 @@ $people = [
         'role'        => 'Junior Researcher',
         'category'    => 'junior_researcher',
         'degree_note' => 'Doctoral Student (S3 UK)',
-        'photo'       => 'amalia-nurlatifah.jpg',
+        'photo'       => 'amalia-nurlatifah.png',
     ],
 
     // --- Postdoctoral and Research Assistants Fellows ---
@@ -100,7 +100,7 @@ $people = [
         'role'        => 'Postdoctoral Researcher',
         'category'    => 'postdoc_ra',
         'degree_note' => null,
-        'photo'       => 'erlin-beliyana.jpg',
+        'photo'       => 'erlin-beliyana.png',
     ],
     [
         'slug'        => 'inovasita-alifdini',
@@ -108,7 +108,7 @@ $people = [
         'role'        => 'Postdoctoral Researcher',
         'category'    => 'postdoc_ra',
         'degree_note' => null,
-        'photo'       => 'inovasita-alifdini.jpg',
+        'photo'       => 'inovasita-alifdini.png',
     ],
     [
         'slug'        => 'amirotul-bahiyah',
@@ -116,7 +116,7 @@ $people = [
         'role'        => 'Postdoctoral Researcher',
         'category'    => 'postdoc_ra',
         'degree_note' => 'Candidate',
-        'photo'       => 'amirotul-bahiyah.jpg',
+        'photo'       => 'amirotul-bahiyah.png',
     ],
     [
         'slug'        => 'gandhi-napitupulu',
@@ -124,7 +124,7 @@ $people = [
         'role'        => 'Postdoctoral Researcher',
         'category'    => 'postdoc_ra',
         'degree_note' => 'Candidate',
-        'photo'       => 'gandhi-napitupulu.jpg',
+        'photo'       => 'gandhi-napitupulu.png',
     ],
     [
         'slug'        => 'narizka-nanda-purwadani',
@@ -132,7 +132,7 @@ $people = [
         'role'        => 'Research Assistant',
         'category'    => 'postdoc_ra',
         'degree_note' => 'Doctoral Student (S3 ITB)',
-        'photo'       => 'narizka-nanda-purwadani.jpg',
+        'photo'       => 'narizka-nanda-purwadani.png',
     ],
     [
         'slug'        => 'alya-fitri-syalsabilla',
@@ -140,7 +140,7 @@ $people = [
         'role'        => 'Research Assistant',
         'category'    => 'postdoc_ra',
         'degree_note' => 'Doctoral Student (S3 Sains Kebumian ITB)',
-        'photo'       => 'alya-fitri-syalsabilla.jpg',
+        'photo'       => 'alya-fitri-syalsabilla.png',
     ],
     [
         'slug'        => 'syifa-alifia-azzahra',
@@ -148,7 +148,7 @@ $people = [
         'role'        => 'Research Assistant',
         'category'    => 'postdoc_ra',
         'degree_note' => 'Master Student (S2 Fisika ITB)',
-        'photo'       => 'syifa-alifia-azzahra.jpg',
+        'photo'       => 'syifa-alifia-azzahra.png',
     ],
     [
         'slug'        => 'afiq-mahasin',
@@ -156,7 +156,7 @@ $people = [
         'role'        => 'Research Assistant',
         'category'    => 'postdoc_ra',
         'degree_note' => 'Master Student (S2 Fisika ITB)',
-        'photo'       => 'afiq-mahasin.jpg',
+        'photo'       => 'afiq-mahasin.png',
     ],
     [
         'slug'        => 'sanaullah-zehri',
@@ -164,7 +164,7 @@ $people = [
         'role'        => 'Research Assistant',
         'category'    => 'postdoc_ra',
         'degree_note' => 'Master Student (S2 Fisika ITB)',
-        'photo'       => 'sanaullah-zehri.jpg',
+        'photo'       => 'sanaullah-zehri.png',
     ],
     [
         'slug'        => 'ikbal-nur-dian-triatmojo',
@@ -172,7 +172,7 @@ $people = [
         'role'        => 'Research Assistant',
         'category'    => 'postdoc_ra',
         'degree_note' => 'Master Student (S2 Geodesi & Geomatika ITB) — Cand.',
-        'photo'       => 'ikbal-nur-dian-triatmojo.jpg',
+        'photo'       => 'ikbal-nur-dian-triatmojo.png',
     ],
 ];
 
@@ -217,7 +217,7 @@ $dss_list = [
 $news_events = [
     [
         'slug'        => 'biweekly-seminar-sept-2026',
-        'title'       => 'Biweekly Seminar: Air-Sea Interaction Update',
+        'title'       => 'Biweekly Seminar IALVI',
         'type'        => 'seminar',
         'date'        => '2026-09-12',
         'time'        => '10:00 - 11:30 WIB',
