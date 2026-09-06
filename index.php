@@ -135,38 +135,24 @@ include 'includes/header.php';
          di IALVI / ASICLIVAR.</p>
     </div>
 
-    <div class="news__grid">
-      <article class="news-card">
-        <div class="news-card__thumb"
-             style="background-image: url('assets/img/news/biweekly-seminar.jpg');"></div>
-        <div class="news-card__body">
-          <p class="news-card__date">28 Agustus 2026</p>
-          <h3 class="news-card__title">Biweekly Seminar IALVI</h3>
-          <p class="news-card__excerpt">Diskusi rutin dua mingguan membahas
-             perkembangan riset interaksi laut-atmosfer.</p>
-        </div>
-      </article>
-      <article class="news-card">
-        <div class="news-card__thumb"
-             style="background-image: url('assets/img/news/earth-sciences-bootcamp.jpg');"></div>
-        <div class="news-card__body">
-          <p class="news-card__date">15 Agustus 2026</p>
-          <h3 class="news-card__title">Earth Sciences Bootcamp</h3>
-          <p class="news-card__excerpt">Pelatihan intensif dasar-dasar sains
-             bumi dan atmosfer untuk mahasiswa magang riset.</p>
-        </div>
-      </article>
-      <article class="news-card">
-        <div class="news-card__thumb"
-             style="background-image: url('assets/img/news/kamajaya-update.jpg');"></div>
-        <div class="news-card__body">
-          <p class="news-card__date">02 Agustus 2026</p>
-          <h3 class="news-card__title">Update Pengembangan KAMAJAYA</h3>
-          <p class="news-card__excerpt">Progres terbaru pengembangan DSS
-             ketahanan pangan berbasis prediksi awal musim.</p>
-        </div>
-      </article>
-    </div>
+   <div class="news__grid">
+  <?php
+  $latest_news = $news_events;
+  usort($latest_news, fn($a, $b) => strtotime($b['date']) <=> strtotime($a['date']));
+  $latest_news = array_slice($latest_news, 0, 3);
+  foreach ($latest_news as $event):
+  ?>
+    <article class="news-card">
+      <div class="news-card__thumb"
+           style="background-image: url('assets/img/news/<?php echo htmlspecialchars($event['image']); ?>');"></div>
+      <div class="news-card__body">
+        <p class="news-card__date"><?php echo htmlspecialchars(date('d M Y', strtotime($event['date']))); ?></p>
+        <h3 class="news-card__title"><?php echo htmlspecialchars($event['title']); ?></h3>
+        <p class="news-card__excerpt"><?php echo htmlspecialchars($event['description']); ?></p>
+      </div>
+    </article>
+  <?php endforeach; ?>
+</div>
   </div>
 </section>
 

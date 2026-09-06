@@ -683,6 +683,109 @@ img {
   }
 }
 
+/* ---------- NEWS & EVENTS  ---------- */
+.event-group {
+  margin-bottom: 48px;
+}
+
+.event-group__title {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
+  margin-bottom: 24px;
+}
+
+.news-card__type {
+  display: inline-block;
+  background: var(--mist);
+  color: var(--sea-blue);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+.news-card__meta {
+  font-size: 0.8rem;
+  color: var(--slate);
+  margin: 4px 0 2px;
+}
+
+.news-card__location {
+  font-size: 0.8rem;
+  color: var(--slate);
+  margin: 0 0 10px;
+}
+
+.news-card__link {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* ---------- CONTACT PAGE ---------- */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.contact-card {
+  background: var(--mist);
+  border-radius: var(--radius);
+  padding: 28px;
+  margin-bottom: 20px;
+}
+
+.contact-card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.contact-socials {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.contact-socials a {
+  display: inline-block;
+  background: var(--foam);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--sea-blue);
+}
+
+.contact-socials a:hover {
+  background: var(--sea-blue);
+  color: var(--foam);
+  text-decoration: none;
+}
+
+.contact-map {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(22, 50, 79, 0.12);
+}
+
+.contact-map iframe {
+  display: block;
+}
+
+@media (max-width: 760px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ==========================================================================
    FOOTER COMPONENT
    ========================================================================== */

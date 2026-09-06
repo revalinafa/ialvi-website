@@ -213,3 +213,67 @@ $dss_list = [
     ['slug' => 'indra',    'name' => 'INDRA',    'tagline' => 'Input Data Sumber Air', 'desc' => 'Decision Support Tool untuk Smart Water Management System.', 'image' => 'indra.jpg', 'featured' => false],
     ['slug' => 'gatotkaca','name' => 'GATOTKACA','tagline' => 'GNSS for Atmospheric Observation and Tracking Climate Change', 'desc' => 'Pengamatan profil atmosfer dengan teknik radio occultation.', 'image' => 'gatotkaca.jpg', 'featured' => false],
 ];
+
+// ----------------------------------------------------------------------
+// 5. NEWS & EVENTS
+// ----------------------------------------------------------------------
+$news_events = [
+    [
+        'slug'        => 'biweekly-seminar-sept-2026',
+        'title'       => 'Biweekly Seminar: Air-Sea Interaction Update',
+        'type'        => 'seminar',
+        'date'        => '2026-09-12',
+        'time'        => '10:00 - 11:30 WIB',
+        'location'    => 'KST Samaun Samadikun, Bandung / Online (Zoom)',
+        'description' => 'Diskusi rutin dua mingguan membahas progres riset interaksi laut-atmosfer.',
+        'image'       => 'biweekly-seminar-sept.jpg',
+        'link'        => null,
+    ],
+    [
+        'slug'        => 'biweekly-seminar-ialvi',
+        'title'       => 'Biweekly Seminar IALVI',
+        'type'        => 'seminar',
+        'date'        => '2026-08-28',
+        'time'        => null,
+        'location'    => 'KST Samaun Samadikun, Bandung',
+        'description' => 'Diskusi rutin dua mingguan membahas perkembangan riset interaksi laut-atmosfer.',
+        'image'       => 'biweekly-seminar.jpg',
+        'link'        => null,
+    ],
+    [
+        'slug'        => 'earth-sciences-bootcamp',
+        'title'       => 'Earth Sciences Bootcamp',
+        'type'        => 'bootcamp',
+        'date'        => '2026-08-15',
+        'time'        => null,
+        'location'    => 'KST Samaun Samadikun, Bandung',
+        'description' => 'Pelatihan intensif dasar-dasar sains bumi dan atmosfer untuk mahasiswa magang riset.',
+        'image'       => 'earth-sciences-bootcamp.jpg',
+        'link'        => null,
+    ],
+    [
+        'slug'        => 'kamajaya-update',
+        'title'       => 'Update Pengembangan KAMAJAYA',
+        'type'        => 'announcement',
+        'date'        => '2026-08-02',
+        'time'        => null,
+        'location'    => 'KST Samaun Samadikun, Bandung',
+        'description' => 'Progres terbaru pengembangan DSS ketahanan pangan berbasis prediksi awal musim.',
+        'image'       => 'kamajaya-update.jpg',
+        'link'        => null,
+    ],
+];
+
+// ----------------------------------------------------------------------
+// 6. CONTACT INFO
+// ----------------------------------------------------------------------
+$contact_info = [
+    'address'   => 'KST Samaun Samadikun, Bandung, Jawa Barat, Indonesia',
+    'email'     => 'ialvi.prima@brin.go.id',
+    'phone'     => null,
+    'map_embed' => 'https://www.google.com/maps/embed?pb=GANTI_DENGAN_EMBED_ASLI',
+    'socials'   => [
+        ['platform' => 'Instagram', 'url' => '#'],
+        ['platform' => 'LinkedIn',  'url' => '#'],
+    ],
+];
