@@ -197,17 +197,19 @@ $extra_programs = [
 // 4. DECISION SUPPORT SYSTEM (untuk halaman About)
 // ----------------------------------------------------------------------
 $dss_list = [
-    ['name' => 'SADEWA',   'desc' => 'Satellite Disaster Early Warning System — peringatan dini hujan ekstrem berbasis satelit.'],
-    ['name' => 'SEMAR',    'desc' => 'Sistem Embaran Maritim — informasi cuaca laut, arus, dan zona potensi penangkapan ikan.'],
-    ['name' => 'SRIKANDI', 'desc' => 'Sistem Informasi Komposisi Atmosfer Indonesia — pemantauan kualitas udara.'],
-    ['name' => 'SANTANU',  'desc' => 'Sistem Pemantau Hujan Spasial berbasis radar X-Band.'],
-    ['name' => 'JATAYU',   'desc' => 'Jaringan Pengamatan Atmosfer untuk Keselamatan Transportasi Udara.'],
-    ['name' => 'KAMAJAYA', 'desc' => 'Kajian Awal Musim Wilayah Indonesia Jangka Madya — DSS ketahanan pangan.'],
-    ['name' => 'SRIRAMA',  'desc' => 'Sistem Informasi Perubahan Iklim Indonesia — proyeksi iklim jangka panjang.'],
-    ['name' => 'INDRA',    'desc' => 'Decision Support Tool untuk Smart Water Management System.'],
-    ['name' => 'GATOTKACA','desc' => 'GNSS for Atmospheric Observation and Tracking Climate Change.'],
-    ['name' => 'NAKULA',   'desc' => 'Prediksi cuaca ekstrem resolusi tinggi berbasis deep learning & HPC.'],
-    ['name' => 'ANTASENA', 'desc' => 'AlmaNak Tambak Sentra Garam — rekomendasi berbasis prediksi curah hujan.'],
-    ['name' => 'KRESNA',   'desc' => 'Knowledge of Risk and Early drought-fire warning System for Needed Action.'],
-    ['name' => 'ARJUNA',   'desc' => 'Analisis Risiko banjir Jangka pendek-menengah Untuk aNtisipasi perubahan iklim IndonesiA.'],
+    // 'featured' => true → ditampilkan di grid zig-zag halaman About
+    ['slug' => 'sadewa',   'name' => 'SADEWA',   'tagline' => 'Satellite Disaster Early Warning System', 'desc' => 'Memantau dan memprediksi kejadian hujan ekstrem yang berpotensi menimbulkan bencana hidrometeorologi hingga resolusi 5 km di seluruh wilayah Indonesia, lalu mengirimkan peringatan dini secara otomatis kepada pihak-pihak terkait penanggulangan bencana.', 'image' => 'sadewa.jpg', 'featured' => true],
+    ['slug' => 'semar',    'name' => 'SEMAR',    'tagline' => 'Sistem Embaran Maritim', 'desc' => 'Memberikan informasi posisi kapal, zona potensi penangkapan ikan, cuaca lautan dan atmosfer, serta frekuensi komunikasi radio secara real time untuk menjamin keselamatan pelayaran dan meningkatkan produksi perikanan tangkap.', 'image' => 'semar.jpg', 'featured' => true],
+    ['slug' => 'nakula',   'name' => 'NAKULA',   'tagline' => 'Numerical-based prediction for Atmosphere-ocean Knowledge Using deep Learning Artificial intelligence', 'desc' => 'Pengembangan dari SADEWA yang difokuskan meningkatkan akurasi prediksi cuaca ekstrem berbasis model numerik kopel atmosfer-laut yang mengintegrasikan deep learning dan dijalankan dengan High Performance Computing, menghasilkan resolusi tinggi hingga 1 km.', 'image' => 'nakula.jpg', 'featured' => true],
+    ['slug' => 'arjuna',   'name' => 'ARJUNA',   'tagline' => 'Analisis Risiko banjir Jangka pendek-menengah Untuk aNtisipasi perubahan iklim IndonesiA', 'desc' => 'Early warning system bencana hidrometeorologi berupa monitoring dan prediksi cuaca-musim resolusi tinggi di lokasi spesifik, memberikan perkiraan harian hingga enam bulan mendatang untuk kesiapsiagaan bencana banjir.', 'image' => 'arjuna.jpg', 'featured' => true],
+    ['slug' => 'antasena', 'name' => 'ANTASENA', 'tagline' => 'AlmaNak Tambak Sentra Garam', 'desc' => 'Memberikan rekomendasi waktu galengan dan peminihan tambak garam berdasarkan prediksi curah hujan, membantu petani garam menentukan waktu produksi yang optimal.', 'image' => 'antasena.jpg', 'featured' => true],
+    ['slug' => 'kamajaya', 'name' => 'KAMAJAYA', 'tagline' => 'Kajian Awal Musim Wilayah Indonesia Jangka Madya', 'desc' => 'Memberikan informasi pengamatan dan prediksi atmosfer (cuaca, awal musim, variabilitas iklim) resolusi tinggi di seluruh wilayah Indonesia untuk mendukung Smart Farming dan Precision Farming.', 'image' => 'kamajaya.jpg', 'featured' => true],
+    ['slug' => 'kresna',   'name' => 'KRESNA',   'tagline' => 'Knowledge of Risk and Early drought-fire warning System for Needed Action', 'desc' => 'Menyediakan indeks risiko kekeringan dan kebakaran lahan (Drought Hazard Index, Fire Hazard Index, dan gabungan keduanya) untuk mendukung kesiapsiagaan dan mitigasi karhutla.', 'image' => 'kresna.jpg', 'featured' => true],
+
+    ['slug' => 'srikandi', 'name' => 'SRIKANDI', 'tagline' => 'Sistem Informasi Komposisi Atmosfer Indonesia', 'desc' => 'Pemantauan kualitas udara dari sensor satelit dan model kimia atmosfer.', 'image' => 'srikandi.jpg', 'featured' => false],
+    ['slug' => 'santanu',  'name' => 'SANTANU',  'tagline' => 'Sistem Pemantau Hujan Spasial', 'desc' => 'Deteksi hujan berbasis radar X-Band resolusi tinggi.', 'image' => 'santanu.jpg', 'featured' => false],
+    ['slug' => 'jatayu',   'name' => 'JATAYU',   'tagline' => 'Jaringan Pengamatan Atmosfer untuk Transportasi Udara', 'desc' => 'Prediksi dinamika atmosfer untuk keselamatan transportasi udara.', 'image' => 'jatayu.jpg', 'featured' => false],
+    ['slug' => 'srirama',  'name' => 'SRIRAMA',  'tagline' => 'Sistem Informasi Perubahan Iklim Indonesia', 'desc' => 'Proyeksi perubahan iklim Indonesia hingga 100 tahun ke depan.', 'image' => 'srirama.jpg', 'featured' => false],
+    ['slug' => 'indra',    'name' => 'INDRA',    'tagline' => 'Input Data Sumber Air', 'desc' => 'Decision Support Tool untuk Smart Water Management System.', 'image' => 'indra.jpg', 'featured' => false],
+    ['slug' => 'gatotkaca','name' => 'GATOTKACA','tagline' => 'GNSS for Atmospheric Observation and Tracking Climate Change', 'desc' => 'Pengamatan profil atmosfer dengan teknik radio occultation.', 'image' => 'gatotkaca.jpg', 'featured' => false],
 ];
