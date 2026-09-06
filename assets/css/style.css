@@ -227,12 +227,11 @@ img {
   box-shadow: 0 12px 32px rgba(22, 50, 79, 0.14);
 }
 
-@media (max-width: 860px) {
+@media (min-width: 768px) {
   .hero__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr !important;
   }
 }
-
 /* ---------- SECTION ---------- */
 .section {
   padding: 64px 0;
