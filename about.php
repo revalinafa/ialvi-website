@@ -6,7 +6,7 @@ include 'includes/header.php';
 ?>
 
 <section class="hero">
-  <div class="container hero__grid" style="display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center;">
+  <div class="container hero__grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
     
     <!-- Kolom Teks -->
     <div class="hero__content">
