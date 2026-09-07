@@ -268,7 +268,7 @@ $contact_info = [
     'address'   => 'KST Samaun Samadikun, Bandung, Jawa Barat, Indonesia',
     'email'     => 'ialvi.prima@brin.go.id',
     'phone'     => null,
-    'map_embed' => 'https://www.google.com/maps/embed?pb=GANTI_DENGAN_EMBED_ASLI',
+    'map_embed' => 'https://maps.google.com/maps?q=-6.8819068,107.6111792&z=17&output=embed',
     'socials'   => [
         ['platform' => 'Instagram', 'url' => '#'],
         ['platform' => 'LinkedIn',  'url' => '#'],
