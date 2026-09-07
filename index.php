@@ -59,9 +59,9 @@ include 'includes/header.php';
 
     <div class="innovation__grid">
       <div class="innovation__item">
-        <img class="innovation__logo" src="assets/img/logos/dss-sadewa.png" alt="Logo SADEWA">
-        <h3 class="innovation__name">SADEWA</h3>
-        <p class="innovation__desc">Satellite Disaster Early Warning System</p>
+        <img class="innovation__logo" src="assets/img/logos/dss-kamajaya.png" alt="Logo KAMAJAYA">
+        <h3 class="innovation__name">KAMAJAYA</h3>
+        <p class="innovation__desc">Kajian Awal Musim Wilayah Indonesia Jangka Madya</p>
       </div>
       <div class="innovation__item">
         <img class="innovation__logo" src="assets/img/logos/dss-semar.png" alt="Logo SEMAR">
@@ -73,7 +73,7 @@ include 'includes/header.php';
         <h3 class="innovation__name">NAKULA</h3>
         <p class="innovation__desc">Prediksi Cuaca Ekstrem Berbasis AI</p>
       </div>
-    </div>
+    </div>    
 
     <div class="innovation__cta">
       <a href="about.php" class="btn btn--primary">Learn more about our DSS &rarr;</a>

@@ -456,7 +456,7 @@ img {
 }
 
 .dss-card__image {
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 18 / 10;
   border-radius: var(--radius);
   background: var(--mist) center/cover no-repeat;
   box-shadow: 0 12px 28px rgba(22, 50, 79, 0.1);
@@ -720,6 +720,94 @@ img {
 .news-card__link {
   font-size: 0.85rem;
   font-weight: 600;
+}
+
+/* ==========================================================================
+   PUBLICATION LIST COMPONENT
+   ========================================================================== */
+.publication__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto; /* Menengahkan list agar lebih rapi */
+}
+
+.publication-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-left: 5px solid #3b82f6; /* Aksen garis biru tebal di sisi kiri */
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.publication-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.1);
+}
+
+.publication-card__meta {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+/* Desain Badge / Label */
+.badge {
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge--solid {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.badge--outline {
+  background-color: transparent;
+  border: 1px solid #93c5fd;
+  color: #2563eb;
+}
+
+.publication-card__title {
+  font-size: 1.25rem;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.publication-card__authors {
+  color: #475569;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.publication-card__journal {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+}
+
+.publication-card__link {
+  color: #3b82f6;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.publication-card__link:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
 }
 
 /* ==========================================================================
