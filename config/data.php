@@ -223,7 +223,7 @@ $news_events = [
         'time'        => '10:00 - 11:30 WIB',
         'location'    => 'KST Samaun Samadikun, Bandung / Online (Zoom)',
         'description' => 'Diskusi rutin dua mingguan membahas progres riset interaksi laut-atmosfer.',
-        'image'       => 'biweekly-seminar-sept.jpg',
+        'image'       => 'biweekly-seminar-sept.jpeg',
         'link'        => null,
     ],
     [
@@ -234,7 +234,7 @@ $news_events = [
         'time'        => null,
         'location'    => 'KST Samaun Samadikun, Bandung',
         'description' => 'Diskusi rutin dua mingguan membahas perkembangan riset interaksi laut-atmosfer.',
-        'image'       => 'biweekly-seminar.jpg',
+        'image'       => 'biweekly-seminar.jpeg',
         'link'        => null,
     ],
     [
@@ -245,7 +245,7 @@ $news_events = [
         'time'        => null,
         'location'    => 'KST Samaun Samadikun, Bandung',
         'description' => 'Pelatihan intensif dasar-dasar sains bumi dan atmosfer untuk mahasiswa magang riset.',
-        'image'       => 'earth-sciences-bootcamp.jpg',
+        'image'       => 'earth-sciences-bootcamp.jpeg',
         'link'        => null,
     ],
     [
@@ -256,7 +256,7 @@ $news_events = [
         'time'        => null,
         'location'    => 'KST Samaun Samadikun, Bandung',
         'description' => 'Progres terbaru pengembangan DSS ketahanan pangan berbasis prediksi awal musim.',
-        'image'       => 'kamajaya-update.jpg',
+        'image'       => 'kamajaya-update.jpeg',
         'link'        => null,
     ],
 ];
