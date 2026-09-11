@@ -32,7 +32,7 @@ $nav_items = [
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title><?php echo htmlspecialchars($page_title); ?> · IALVI / ASICLIVAR Research Group</title>
+<title><?php echo htmlspecialchars($page_title); ?> · ASICLIVAR Research Group</title>
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -64,7 +64,7 @@ $nav_items = [
       <!-- Akhir Logo SVG -->
 
       <span class="navbar__brand-text">
-        IALVI / ASICLIVAR
+        ASICLIVAR
       </span>
     </a>
 

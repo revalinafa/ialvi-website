@@ -4,7 +4,7 @@
       
       <!-- Kolom 1: Profil -->
       <div class="site-footer__brand">
-        <h3 class="site-footer__title">IALVI / ASICLIVAR</h3>
+        <h3 class="site-footer__title">ASICLIVAR</h3>
         <p class="site-footer__text">
           Air-Sea Interaction and Climate Variability Research Group.<br>
           Pusat Riset Iklim dan Atmosfer (PRIMA).
@@ -47,10 +47,7 @@
     <!-- Bagian Bawah Footer (Copyright) -->
     <div class="site-footer__bottom">
       <div class="site-footer__copyright">
-        &copy; <?php echo date('Y'); ?> IALVI Research Group. All rights reserved.
-      </div>
-      <div class="site-footer__legal">
-        Dirancang untuk Pusat Riset Iklim dan Atmosfer (PRIMA).
+        &copy; <?php echo date('Y'); ?> ASICLIVAR Research Group. All rights reserved.
       </div>
     </div>
   </div>
