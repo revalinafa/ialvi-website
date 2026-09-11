@@ -3,30 +3,30 @@ require_once 'config/data.php';
 $page_title  = 'Publication';
 $active_page = 'publication';
 
-// Array data publikasi (Nantinya bisa dipindahkan ke config/data.php atau database)
+// Publication data array (can later be moved to config/data.php or a database)
 $publications = [
     [
         'title'   => 'Understanding the Dynamics of the Maritime Continent: A Comprehensive Review',
-        'authors' => 'Erma Yulihastin, dkk.',
+        'authors' => 'Erma Yulihastin, et al.',
         'journal' => 'Journal of Atmospheric Sciences',
         'year'    => '2025',
-        'type'    => 'Jurnal Internasional',
+        'type'    => 'International Journal',
         'link'    => '#'
     ],
     [
-        'title'   => 'Prediksi Cuaca Ekstrem Menggunakan Model NAKULA Berbasis Deep Learning',
+        'title'   => 'Extreme Weather Prediction Using the Deep Learning-Based NAKULA Model',
         'authors' => 'M. Furqon Azis Ismail, Erma Yulihastin',
-        'journal' => 'Jurnal Meteorologi dan Geofisika',
+        'journal' => 'Journal of Meteorology and Geophysics',
         'year'    => '2024',
-        'type'    => 'Jurnal Nasional',
+        'type'    => 'National Journal',
         'link'    => '#'
     ],
     [
-        'title'   => 'Literasi Coding dan Kecerdasan Buatan (AI) di Era Digital',
-        'authors' => 'Revalina Fidiya Anugrah, dkk.',
-        'journal' => 'TERNAVIA: Jurnal Pengabdian Multidisiplin',
+        'title'   => 'Coding Literacy and Artificial Intelligence (AI) in the Digital Era',
+        'authors' => 'Revalina Fidiya Anugrah, et al.',
+        'journal' => 'TERNAVIA: Multidisciplinary Community Service Journal',
         'year'    => '2024',
-        'type'    => 'Jurnal Multidisiplin',
+        'type'    => 'Multidisciplinary Journal',
         'link'    => '#'
     ]
 ];
@@ -34,28 +34,29 @@ $publications = [
 include 'includes/header.php';
 ?>
 
-<!-- Hero Section Khusus Publikasi -->
+<!-- Publication-specific Hero Section -->
 <section class="hero" style="padding: 4rem 0; background-color: #f8fafc; border-bottom: 1px solid #e2e8f0;">
   <div class="container text-center">
     <div class="hero__eyebrow" style="color: #3b82f6; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem;">
-      Penelitian &amp; Jurnal
+      Research &amp; Journals
     </div>
-    <h1 style="font-size: 2.5rem; color: #0f172a; margin-bottom: 1rem;">Publikasi Ilmiah IALVI</h1>
+    <h1 style="font-size: 2.5rem; color: #0f172a; margin-bottom: 1rem;">IALVI Scientific Publications</h1>
     <p style="color: #475569; max-width: 600px; margin: 0 auto; line-height: 1.6;">
-      Jelajahi karya tulis, artikel jurnal, dan kontribusi riset dari tim Air-Sea Interaction &amp; Climate Variability Research Group.
+      Explore papers, journal articles, and research contributions from the
+      Air-Sea Interaction &amp; Climate Variability Research Group.
     </p>
   </div>
 </section>
 
-<!-- Section Daftar Publikasi -->
+<!-- Publication List Section -->
 <section class="section">
   <div class="container">
     <div class="section__head">
-      <h2>Daftar Publikasi Terbaru</h2>
-      <p>Menampilkan hasil riset observasi, pemodelan, dan pengembangan DSS.</p>
+      <h2>Latest Publications</h2>
+      <p>Featuring research outcomes from observation, modeling, and DSS development.</p>
     </div>
 
-    <!-- Wrapper List Publikasi -->
+    <!-- Publication List Wrapper -->
     <div class="publication__list">
       <?php foreach ($publications as $pub): ?>
         <article class="publication-card">
@@ -66,7 +67,7 @@ include 'includes/header.php';
           <h3 class="publication-card__title"><?php echo $pub['title']; ?></h3>
           <p class="publication-card__authors"><?php echo $pub['authors']; ?></p>
           <p class="publication-card__journal"><em><?php echo $pub['journal']; ?></em></p>
-          <a href="<?php echo $pub['link']; ?>" class="publication-card__link">Baca Artikel &rarr;</a>
+          <a href="<?php echo $pub['link']; ?>" class="publication-card__link">Read Article &rarr;</a>
         </article>
       <?php endforeach; ?>
     </div>
