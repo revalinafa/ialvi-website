@@ -37,7 +37,7 @@ $people = [
     [
         'slug'        => 'furqon-azis-ismail',
         'name'        => 'M. Furqon Azis Ismail, S.Si., M.Sc., Ph.D.',
-        'role'        => 'Senior Researcher',
+        'role'        => 'Senior Researcher (',
         'category'    => 'senior_researcher',
         'degree_note' => null,
         'photo'       => 'furqon-azis-ismail.png',
@@ -273,4 +273,38 @@ $contact_info = [
         ['platform' => 'Instagram', 'url' => '#'],
         ['platform' => 'LinkedIn',  'url' => '#'],
     ],
+];
+
+// ----------------------------------------------------------------------
+// 8. STAKEHOLDER / MITRA
+//    Dikelompokkan berdasarkan kategori mitra.
+// ----------------------------------------------------------------------
+$stakeholder_categories = [
+    'industry'   => 'Industry & Business Partners',
+    'government' => 'Government & Ministry Partners',
+];
+ 
+$stakeholders = [
+    // --- Industry & Business Partners ---
+    // CATATAN: 'logo' => null berarti belum ada file logo, card akan
+    // fallback tampil nama teks saja. Isi dengan nama file di
+    // assets/img/stakeholders/<file> begitu logo asli tersedia.
+    ['name' => 'PT. MTS',        'sector' => 'Climate Smart & Precision Agriculture', 'category' => 'industry', 'logo' => null],
+    ['name' => 'PT. EWINDO',     'sector' => 'Climate Modelling for Food Security',    'category' => 'industry', 'logo' => null],
+    ['name' => 'PT. PLN',        'sector' => 'Weather & Climate Modelling for Operational Safety and Renewable Energy', 'category' => 'industry', 'logo' => null],
+    ['name' => 'PT. MHU',        'sector' => 'Weather & Climate Modelling for Operational Safety and Renewable Energy', 'category' => 'industry', 'logo' => null],
+    ['name' => 'PHE Pertamina',  'sector' => 'Ocean-Fisheries-Coastal Prediction Systems', 'category' => 'industry', 'logo' => null],
+    ['name' => 'SIGN',           'sector' => 'Ocean-Fisheries-Coastal Prediction Systems', 'category' => 'industry', 'logo' => null],
+    ['name' => 'DATATEC',        'sector' => 'Weather and Seasonal Prediction Systems for Planning and Safety Transportation', 'category' => 'industry', 'logo' => null],
+    ['name' => 'KAMSELINDO',     'sector' => 'Weather and Seasonal Prediction Systems for Planning and Safety Transportation', 'category' => 'industry', 'logo' => null],
+ 
+   // --- Government & Ministry Partners ---
+    ['name' => 'BMKG',     'sector' => 'Accurate Atmospheric Information', 'category' => 'government', 'logo' => 'bmkg.png'],
+    ['name' => 'BNPB',     'sector' => 'Disaster Early Warning',           'category' => 'government', 'logo' => 'bnpb.png'],
+    ['name' => 'KEMENTAN', 'sector' => 'Precision Agriculture',            'category' => 'government', 'logo' => null],
+    ['name' => 'KKP',      'sector' => 'Maritime Productivity',            'category' => 'government', 'logo' => null],
+    ['name' => 'KEMENHUB', 'sector' => 'Transportation Safety',            'category' => 'government', 'logo' => null],
+    ['name' => 'ESDM',     'sector' => 'Renewable Energy',                 'category' => 'government', 'logo' => null],
+    ['name' => 'KLHK',     'sector' => 'Health & Environment',             'category' => 'government', 'logo' => null],
+    ['name' => 'KEMENKES', 'sector' => 'Health & Environment',             'category' => 'government', 'logo' => null],
 ];

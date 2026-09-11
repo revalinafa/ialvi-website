@@ -15,7 +15,15 @@ $nav_items = [
     'about'       => ['label' => 'About',        'href' => 'about.php'],
     'people'      => ['label' => 'People',       'href' => 'people.php'],
     'news'        => ['label' => 'News & Event', 'href' => 'news.php'],
-    'publication' => ['label' => 'Publication',  'href' => 'publication.php'],
+    'publication' => [
+        'label'    => 'Publication',
+        'href'     => 'publication.php',
+        'children' => [
+            'patent'      => ['label' => 'Patent',      'href' => 'patent.php'],
+            'stakeholder' => ['label' => 'Stakeholder', 'href' => 'stakeholder.php'],
+        ],
+    ],
+    'gallery'      => ['label' => 'Gallery',       'href' => 'gallery.php'],
     'contact'     => ['label' => 'Contact',      'href' => 'contact.php'],
 ];
 ?>
@@ -57,7 +65,6 @@ $nav_items = [
 
       <span class="navbar__brand-text">
         IALVI / ASICLIVAR
-        <small>Pusat Riset Iklim dan Atmosfer &mdash; BRIN</small>
       </span>
     </a>
 
@@ -65,11 +72,34 @@ $nav_items = [
 
     <ul class="navbar__menu" id="navMenu">
       <?php foreach ($nav_items as $key => $item): ?>
-        <li>
+        <?php
+          $has_children = !empty($item['children']);
+          $is_active = ($active_page === $key);
+          if ($has_children) {
+              foreach ($item['children'] as $child_key => $child) {
+                  if ($active_page === $child_key) { $is_active = true; }
+              }
+          }
+        ?>
+        <li class="navbar__item<?php echo $has_children ? ' has-dropdown' : ''; ?>">
           <a href="<?php echo $item['href']; ?>"
-             class="<?php echo $active_page === $key ? 'is-active' : ''; ?>">
+             class="<?php echo $is_active ? 'is-active' : ''; ?>">
             <?php echo $item['label']; ?>
+            <?php if ($has_children): ?><span class="navbar__caret">&#9662;</span><?php endif; ?>
           </a>
+
+          <?php if ($has_children): ?>
+            <ul class="dropdown-menu">
+              <?php foreach ($item['children'] as $child_key => $child): ?>
+                <li>
+                  <a href="<?php echo $child['href']; ?>"
+                     class="<?php echo $active_page === $child_key ? 'is-active' : ''; ?>">
+                    <?php echo $child['label']; ?>
+                  </a>
+                </li>
+              <?php endforeach; ?>
+            </ul>
+          <?php endif; ?>
         </li>
       <?php endforeach; ?>
     </ul>
