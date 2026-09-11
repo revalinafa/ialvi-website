@@ -1250,3 +1250,104 @@ img {
     grid-template-columns: 1fr;
   }
 }
+/* ---------- MASONRY GALLERY (gallery.php) ---------- */
+.gallery-masonry {
+  column-count: 1;
+  column-gap: 20px;
+}
+
+@media (min-width: 620px) {
+  .gallery-masonry {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 960px) {
+  .gallery-masonry {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 1300px) {
+  .gallery-masonry {
+    column-count: 4;
+  }
+}
+
+.gallery-item {
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  margin: 0 0 20px;
+  background: var(--foam);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(22, 50, 79, 0.06);
+  transition:
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
+}
+
+.gallery-item:hover {
+  box-shadow: 0 10px 26px rgba(22, 50, 79, 0.12);
+  transform: translateY(-2px);
+}
+
+/* Intentionally no object-fit/height override — original aspect ratio
+   is preserved for every image, whatever its native dimensions are. */
+.gallery-item__media {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.gallery-item__caption {
+  margin: 0;
+  padding: 12px 14px;
+  font-size: 0.85rem;
+  color: var(--slate);
+}
+
+/* Video thumbnail wrapper + play button overlay */
+.gallery-item__video-link {
+  position: relative;
+  display: block;
+  line-height: 0; /* removes inline-image whitespace gap */
+}
+
+.gallery-item__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(22, 50, 79, 0.75);
+  color: var(--foam);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease;
+}
+
+.gallery-item__video-link:hover .gallery-item__play {
+  background: var(--sea-blue);
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+/* Optional: soft dark veil behind the play icon so it reads clearly
+   on bright thumbnails, without covering the whole image */
+.gallery-item__video-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(22, 50, 79, 0) 60%,
+    rgba(22, 50, 79, 0.25) 100%
+  );
+  pointer-events: none;
+}
