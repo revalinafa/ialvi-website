@@ -2,40 +2,40 @@
   <div class="container">
     <div class="site-footer__grid">
       
-      <!-- Kolom 1: Profil -->
+      <!-- Column 1: Profile -->
       <div class="site-footer__brand">
         <h3 class="site-footer__title">ASICLIVAR</h3>
         <p class="site-footer__text">
           Air-Sea Interaction and Climate Variability Research Group.<br>
-          Pusat Riset Iklim dan Atmosfer (PRIMA).
+          Research Center for Climate and Atmosphere (PRIMA).
         </p>
         <a href="https://brin.go.id" target="_blank" class="site-footer__badge">
-          Bagian dari Badan Riset dan Inovasi Nasional (BRIN)
+          Part of the National Research and Innovation Agency (BRIN)
         </a>
       </div>
 
-      <!-- Kolom 2: Tautan Cepat -->
+      <!-- Column 2: Quick Links -->
       <div class="site-footer__links">
-        <h4 class="site-footer__subtitle">Jelajahi</h4>
+        <h4 class="site-footer__subtitle">Explore</h4>
         <ul class="site-footer__list">
-          <li><a href="about.php" class="site-footer__link">Tentang Kami & DSS</a></li>
-          <li><a href="people.php" class="site-footer__link">Tim Peneliti</a></li>
-          <li><a href="publication.php" class="site-footer__link">Publikasi Riset</a></li>
-          <li><a href="news.php" class="site-footer__link">Berita & Seminar</a></li>
+          <li><a href="about.php" class="site-footer__link">About Us &amp; DSS</a></li>
+          <li><a href="people.php" class="site-footer__link">Research Team</a></li>
+          <li><a href="publication.php" class="site-footer__link">Publications</a></li>
+          <li><a href="news.php" class="site-footer__link">News &amp; Seminars</a></li>
         </ul>
       </div>
 
-      <!-- Kolom 3: Kontak & Lokasi -->
+      <!-- Column 3: Contact & Location -->
       <div class="site-footer__contact">
-        <h4 class="site-footer__subtitle">Hubungi Kami</h4>
+        <h4 class="site-footer__subtitle">Contact Us</h4>
         <ul class="site-footer__list">
           <li class="site-footer__list-item">
-            <!-- Ikon Map Pin -->
+            <!-- Map Pin Icon -->
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-            <span>KST Samaun Samadikun<br>Bandung, Jawa Barat, Indonesia</span>
+            <span>KST Samaun Samadikun<br>Bandung, West Java, Indonesia</span>
           </li>
           <li class="site-footer__list-item">
-            <!-- Ikon Mail -->
+            <!-- Mail Icon -->
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
             <a href="mailto:ialvi@brin.go.id" class="site-footer__link">ialvi@brin.go.id</a>
           </li>
@@ -44,7 +44,7 @@
 
     </div>
 
-    <!-- Bagian Bawah Footer (Copyright) -->
+    <!-- Footer Bottom (Copyright) -->
     <div class="site-footer__bottom">
       <div class="site-footer__copyright">
         &copy; <?php echo date('Y'); ?> ASICLIVAR Research Group. All rights reserved.
