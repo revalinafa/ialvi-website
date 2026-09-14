@@ -960,92 +960,149 @@ img {
   font-weight: 600;
 }
 
-/* ==========================================================================
-   PUBLICATION LIST COMPONENT
-   ========================================================================== */
-.publication__list {
+/* ---------- PUBLICATION TABS ---------- */
+.pub-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 36px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 20px;
+}
+
+.pub-tabs__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--mist);
+  color: var(--slate);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 9px 18px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.pub-tabs__btn:hover {
+  background: #DCEAF5;
+  color: var(--deep-ocean);
+}
+
+.pub-tabs__btn.is-active {
+  background: var(--sea-blue);
+  color: var(--foam);
+}
+
+.pub-tabs__count {
+  background: rgba(255, 255, 255, 0.3);
+  color: inherit;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 1px 7px;
+  border-radius: 999px;
+}
+
+.pub-tabs__btn:not(.is-active) .pub-tabs__count {
+  background: rgba(22, 50, 79, 0.08);
+}
+
+/* ---------- PUBLICATION PANELS ---------- */
+.pub-panel { display: none; }
+.pub-panel.is-visible { display: block; }
+
+.pub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+/* ---------- PUBLICATION CARD ---------- */
+.pub-card {
+  background: var(--foam);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  max-width: 900px;
-  margin: 0 auto; /* Menengahkan list agar lebih rapi */
+  gap: 10px;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
-.publication-card {
-  background-color: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-left: 5px solid #3b82f6; /* Aksen garis biru tebal di sisi kiri */
-  border-radius: 8px;
-  padding: 1.5rem 2rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+.pub-card:hover {
+  box-shadow: 0 14px 28px rgba(22, 50, 79, 0.10);
+  border-color: var(--sky);
+  transform: translateY(-3px);
 }
 
-.publication-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.1);
-}
-
-.publication-card__meta {
+.pub-card__top {
   display: flex;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 
-/* Desain Badge / Label */
-.badge {
-  padding: 0.35rem 0.85rem;
-  border-radius: 9999px;
-  font-size: 0.75rem;
+.pub-card__badge {
+  display: inline-block;
+  font-size: 0.7rem;
   font-weight: 700;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  padding: 3px 10px;
+  border-radius: 999px;
 }
 
-.badge--solid {
-  background-color: #dbeafe;
-  color: #1e40af;
+.pub-card__badge--year {
+  background: var(--deep-ocean);
+  color: var(--foam);
 }
 
-.badge--outline {
-  background-color: transparent;
-  border: 1px solid #93c5fd;
-  color: #2563eb;
+.pub-card__badge--type {
+  background: var(--mist);
+  color: var(--sea-blue);
 }
 
-.publication-card__title {
-  font-size: 1.25rem;
-  color: #0f172a;
-  margin-bottom: 0.5rem;
-  line-height: 1.4;
-}
-
-.publication-card__authors {
-  color: #475569;
-  font-size: 0.95rem;
-  font-weight: 500;
-  margin-bottom: 0.25rem;
-}
-
-.publication-card__journal {
-  color: #64748b;
-  font-size: 0.95rem;
-  margin-bottom: 1.25rem;
-}
-
-.publication-card__link {
-  color: #3b82f6;
+.pub-card__title {
+  font-family: var(--font-head);
+  font-size: 1.08rem;
   font-weight: 600;
-  text-decoration: none;
-  font-size: 0.95rem;
-  transition: color 0.2s ease;
+  color: var(--deep-ocean);
+  line-height: 1.4;
+  margin: 0;
 }
 
-.publication-card__link:hover {
-  color: #1d4ed8;
-  text-decoration: underline;
+.pub-card__authors {
+  font-size: 0.85rem;
+  color: var(--ink);
+  margin: 0;
+}
+
+.pub-card__venue {
+  font-size: 0.85rem;
+  color: var(--slate);
+  margin: 0 0 4px;
+}
+
+.pub-card__link {
+  margin-top: auto;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--sea-blue);
+  text-decoration: none;
+}
+
+.pub-card__link:hover { text-decoration: underline; }
+
+.pub-card__link--disabled {
+  color: var(--slate);
+  font-weight: 500;
+  cursor: default;
+}
+.pub-tabs__span {
+  font-weight: 500;
+  opacity: 0.85;
+  font-size: 0.8em;
 }
 
 /* ==========================================================================
@@ -1250,7 +1307,7 @@ img {
     grid-template-columns: 1fr;
   }
 }
-/* ---------- MASONRY GALLERY (gallery.php) ---------- */
+/* ---------- MASONRY GALLERY (gallery.php) — atmo.ai-inspired ---------- */
 .gallery-masonry {
   column-count: 1;
   column-gap: 20px;
@@ -1278,43 +1335,100 @@ img {
   break-inside: avoid;
   -webkit-column-break-inside: avoid;
   margin: 0 0 20px;
-  background: var(--foam);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: 0 4px 14px rgba(22, 50, 79, 0.06);
-  transition:
-    box-shadow 0.15s ease,
-    transform 0.15s ease;
 }
 
-.gallery-item:hover {
-  box-shadow: 0 10px 26px rgba(22, 50, 79, 0.12);
-  transform: translateY(-2px);
-}
-
-/* Intentionally no object-fit/height override — original aspect ratio
-   is preserved for every image, whatever its native dimensions are. */
-.gallery-item__media {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.gallery-item__caption {
-  margin: 0;
-  padding: 12px 14px;
-  font-size: 0.85rem;
-  color: var(--slate);
-}
-
-/* Video thumbnail wrapper + play button overlay */
-.gallery-item__video-link {
+/* The "frame" is the photo/video card itself — position: relative lets us
+   layer the telemetry-style overlay, corner arrow, and play button on top
+   without ever cropping the image (no object-fit anywhere). */
+.gallery-item__frame {
   position: relative;
   display: block;
   line-height: 0; /* removes inline-image whitespace gap */
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--foam);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 14px rgba(22, 50, 79, 0.06);
+  transition:
+    box-shadow 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
 }
 
+.gallery-item__frame:hover {
+  box-shadow: 0 14px 30px rgba(22, 50, 79, 0.14);
+  border-color: var(--sky);
+  transform: translateY(-3px);
+}
+
+.gallery-item__media {
+  display: block;
+  width: 100%;
+  height: auto; /* original aspect ratio preserved, no cropping */
+}
+
+/* Bottom "telemetry tag" overlay — monospace label + short location string,
+   echoing the coordinate-style captions used on atmo.ai's hero cards. */
+.gallery-item__overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 14px 12px;
+  background: linear-gradient(
+    180deg,
+    rgba(22, 50, 79, 0) 0%,
+    rgba(22, 50, 79, 0.78) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  line-height: normal; /
+}
+
+.gallery-item__tag {
+  font-family: "Inter", sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--foam);
+}
+
+.gallery-item__coord {
+  font-family: "Menlo", "Consolas", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  color: #cfe0ee;
+}
+
+/* Small directional arrow badge, top-right corner — a nod to the little
+   compass/direction glyphs floating over atmo.ai's satellite imagery. */
+.gallery-item__corner {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--deep-ocean);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.gallery-item__frame:hover .gallery-item__corner {
+  background: var(--sea-blue);
+  color: var(--foam);
+  transform: translate(2px, -2px);
+}
+
+/* Video play button, centered over the thumbnail */
 .gallery-item__play {
   position: absolute;
   top: 50%;
@@ -1333,21 +1447,15 @@ img {
     transform 0.15s ease;
 }
 
-.gallery-item__video-link:hover .gallery-item__play {
+.gallery-item__frame:hover .gallery-item__play {
   background: var(--sea-blue);
   transform: translate(-50%, -50%) scale(1.08);
 }
 
-/* Optional: soft dark veil behind the play icon so it reads clearly
-   on bright thumbnails, without covering the whole image */
-.gallery-item__video-link::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(22, 50, 79, 0) 60%,
-    rgba(22, 50, 79, 0.25) 100%
-  );
-  pointer-events: none;
+/* Caption line below the card (kept outside the frame, unlike atmo.ai,
+   so long captions never overlap the image) */
+.gallery-item__caption {
+  margin: 8px 2px 0;
+  font-size: 0.82rem;
+  color: var(--slate);
 }
