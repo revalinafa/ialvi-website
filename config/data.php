@@ -37,7 +37,7 @@ $people = [
     [
         'slug'        => 'furqon-azis-ismail',
         'name'        => 'M. Furqon Azis Ismail, S.Si., M.Sc., Ph.D.',
-        'role'        => 'Senior Researcher (head of research of oceanology)',
+        'role'        => 'Senior Researcher (Head of Research on Oceanology)',
         'category'    => 'senior_researcher',
         'degree_note' => null,
         'photo'       => 'furqon-azis-ismail.png',
