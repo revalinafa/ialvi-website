@@ -10,8 +10,8 @@ include 'includes/header.php';
   <div class="container">
     <div class="hero__eyebrow">Our Partners</div>
     <h1>Stakeholder</h1>
-    <p>Mitra industri, badan usaha, dan instansi pemerintah yang bekerja sama
-       dengan Air-Sea Interaction &amp; Climate Variability Research Group.</p>
+    <p>Industry partners, business entities, and government agencies collaborating
+       with the Air-Sea Interaction &amp; Climate Variability Research Group.</p>
   </div>
 </section>
 

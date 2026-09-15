@@ -146,16 +146,35 @@ include 'includes/header.php';
 
     <div class="news__grid">
       <?php
-      $latest_news = $news_events;
-      usort($latest_news, fn($a, $b) => strtotime($b['date']) <=> strtotime($a['date']));
-      $latest_news = array_slice($latest_news, 0, 3);
+      // Ambil hanya entri bergaya poster (bukan seri Events Schedule/bootcamp
+      // tabel), sama seperti logika "Upcoming Events" & "Events" di news.php.
+      $today    = strtotime('today');
+      $is_past  = fn($e) => strtotime($e['date_end'] ?? $e['date']) < $today;
+      $poster_events = array_filter($news_events, fn($e) => empty($e['speaker']) && empty($e['software']));
+
+      $home_upcoming = array_filter($poster_events, fn($e) => !$is_past($e));
+      $home_past     = array_filter($poster_events, $is_past);
+
+      usort($home_upcoming, fn($a, $b) => strtotime($a['date']) <=> strtotime($b['date']));
+      usort($home_past,     fn($a, $b) => strtotime($b['date']) <=> strtotime($a['date']));
+
+      // Prioritaskan upcoming dulu, baru past, total 3 kartu.
+      $latest_news = array_slice(array_merge($home_upcoming, $home_past), 0, 3);
+
       foreach ($latest_news as $event):
+        $start = strtotime($event['date']);
+        $end   = !empty($event['date_end']) ? strtotime($event['date_end']) : null;
+        $date_display = $end
+            ? htmlspecialchars(date('d', $start)) . '&ndash;' . htmlspecialchars(date('d M Y', $end))
+            : htmlspecialchars(date('d M Y', $start));
       ?>
         <article class="news-card">
-          <div class="news-card__thumb"
-               style="background-image: url('assets/img/news/<?php echo htmlspecialchars($event['image']); ?>');"></div>
+          <?php if (!empty($event['image'])): ?>
+            <div class="news-card__thumb"
+                 style="background-image: url('assets/img/news/<?php echo htmlspecialchars($event['image']); ?>');"></div>
+          <?php endif; ?>
           <div class="news-card__body">
-            <p class="news-card__date"><?php echo htmlspecialchars(date('d M Y', strtotime($event['date']))); ?></p>
+            <p class="news-card__date"><?php echo $date_display; ?></p>
             <h3 class="news-card__title"><?php echo htmlspecialchars($event['title']); ?></h3>
             <p class="news-card__excerpt"><?php echo htmlspecialchars($event['description']); ?></p>
           </div>
