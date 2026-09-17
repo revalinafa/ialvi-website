@@ -7,10 +7,10 @@
         <h3 class="site-footer__title">ASICLIVAR</h3>
         <p class="site-footer__text">
           Air-Sea Interaction and Climate Variability Research Group.<br>
-          Research Center for Climate and Atmosphere (PRIMA).
+          Research Center for Climate and Atmosphere.
         </p>
         <a href="https://brin.go.id" target="_blank" class="site-footer__badge">
-          Part of the National Research and Innovation Agency (BRIN)
+          Part of the National Research and Innovation Agency
         </a>
       </div>
 

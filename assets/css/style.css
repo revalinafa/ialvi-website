@@ -1265,36 +1265,53 @@ img {
   flex-shrink: 0;
 }
 
+.contact-card__email-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact-card__email-link:hover {
+  color: var(--sea-blue);
+  text-decoration: none;
+}
+
 .contact-socials {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 12px 0 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 10px;
 }
 
 .contact-socials a {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  background: var(--foam);
-  border: 1px solid var(--border);
-  border-radius: 50%;
+  gap: 8px;
+  color: var(--ink);
+  text-decoration: none;
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.contact-socials a svg {
+  width: 20px;
+  height: 20px;
+  color: var(--sea-blue);
+  flex-shrink: 0;
+}
+
+.contact-socials a:hover {
   color: var(--sea-blue);
 }
 
 .contact-socials a svg {
   width: 20px;
   height: 20px;
-}
-
-.contact-socials a:hover {
-  background: var(--sea-blue);
-  color: var(--foam);
 }
 
 .contact-map {

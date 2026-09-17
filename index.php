@@ -8,7 +8,7 @@ include 'includes/header.php';
 <section class="hero">
   <div class="container hero__grid">
     <div>
-      <div class="hero__eyebrow">National Research and Innovation Agency (BRIN)</div>
+      <div class="hero__eyebrow">National Research and Innovation Agency</div>
       <h1>Understanding Air-Sea Interaction Across the Indonesian Maritime Continent</h1>
       <p>We study how the ocean and atmosphere interact over Indonesia's equatorial
          maritime continent, turning observation and modeling into decision support

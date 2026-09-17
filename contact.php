@@ -10,7 +10,7 @@ include 'includes/header.php';
   <div class="container">
     <div class="hero__eyebrow">Get in Touch</div>
     <h1>Contact Us</h1>
-    <p>Hubungi kami untuk kolaborasi riset, kunjungan, atau pertanyaan lainnya.</p>
+    <p>Contact us for research collaborations, visits, or other inquiries.</p>
   </div>
 </section>
 
@@ -24,31 +24,28 @@ include 'includes/header.php';
             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/>
             <circle cx="12" cy="10" r="3"/>
           </svg>
-          Alamat
+          Address
         </h2>
         <p><?php echo nl2br(htmlspecialchars($contact_info['address'])); ?></p>
       </div>
 
       <div class="contact-card">
         <h2>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="2" y="4" width="20" height="16" rx="2"/>
-            <path d="m22 6-10 7L2 6"/>
-          </svg>
-          Email
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=<?php echo htmlspecialchars($contact_info['email']); ?>"
+             target="_blank" rel="noopener" class="contact-card__email-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="m22 6-10 7L2 6"/>
+            </svg>
+            Email
+          </a>
         </h2>
-        <p><a href="mailto:<?php echo htmlspecialchars($contact_info['email']); ?>">
-          <?php echo htmlspecialchars($contact_info['email']); ?>
-        </a></p>
 
         <?php if (!empty($contact_info['phone'])): ?>
           <h2>Telepon</h2>
           <p><?php echo htmlspecialchars($contact_info['phone']); ?></p>
         <?php endif; ?>
-      </div>
 
-      <div class="contact-card">
-        <h2>Media Sosial</h2>
         <?php
         function render_social_icon($platform) {
             switch (strtolower($platform)) {
@@ -70,8 +67,9 @@ include 'includes/header.php';
         <ul class="contact-socials">
           <?php foreach ($contact_info['socials'] as $social): ?>
             <li>
-              <a href="<?php echo htmlspecialchars($social['url']); ?>" aria-label="<?php echo htmlspecialchars($social['platform']); ?>">
+              <a href="<?php echo htmlspecialchars($social['url']); ?>" target="_blank" rel="noopener">
                 <?php echo render_social_icon($social['platform']); ?>
+                <span><?php echo htmlspecialchars($social['platform']); ?></span>
               </a>
             </li>
           <?php endforeach; ?>

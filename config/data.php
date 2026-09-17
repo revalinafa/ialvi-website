@@ -239,33 +239,6 @@ $news_events = [
         'link'        => null,
     ],
     [
-        'slug'        => 'bootcamp-lstm-inundation-flood',
-        'title'       => 'Modeling LSTM for Inundation Flood',
-        'type'        => 'bootcamp',
-        'date'        => '2026-10-27',
-        'time'        => '09:00 - 12:00 WIB',
-        'location'    => 'Online (Google Meet)',
-        'speaker'     => 'Afiq Mahasin',
-        'software'    => 'MATLAB',
-        'description' => 'Earth Sciences Bootcamp session on LSTM modeling for inundation flood.',
-        'image'       => null,
-        'link'        => null,
-    ],
-    [
-        'slug'        => 'bootcamp-wrf-kamajaya',
-        'title'       => 'How to Run WRF for KAMAJAYA',
-        'type'        => 'bootcamp',
-        'date'        => '2026-10-13',
-        'date_end'    => '2026-10-15',
-        'time'        => '09:00 - 12:00 WIB',
-        'location'    => 'Online (Google Meet)',
-        'speaker'     => 'Candra Nur Ihsan',
-        'software'    => 'HPC',
-        'description' => 'Earth Sciences Bootcamp session on running the WRF model for KAMAJAYA.',
-        'image'       => null,
-        'link'        => null,
-    ],
-    [
         'slug'        => 'bootcamp-tornado-data-processing',
         'title'       => 'Tornado Data Processing and Analysis',
         'type'        => 'bootcamp',
@@ -316,6 +289,17 @@ $news_events = [
         'image'       => 'earth-school.jpeg',
         'link'        => null,
     ],
+     [
+        'slug'        => 'biweekly-seminar-sept-17-2026',
+        'title'       => 'Future Changes of Compound Wind-Precipitation Extremes in the Indonesian Maritime Continent from Downscaled CMIP6',
+        'type'        => 'seminar',
+        'date'        => '2026-09-17',
+        'time'        => '09:30 - 10:30 WIB',
+        'location'    => 'Hybrid — Meeting Room 80.3, BRIN KST. Samaun Samadikun, Dago, Bandung / Google Meet (meet.google.com/wsg-nckm-crd)',
+        'description' => 'Dr.rer.nat. Inovasita Alifdini (Postdoctoral, RG. ASICLIVAR) presents: "High-intensity CWPEs are driven more by precipitation than wind, with no systematic change in wind-precipitation dependence." Free e-certificate available.',
+        'image'       => 'biweekly-seminar2.jpeg',
+        'link'        => null,
+    ],
 ];
 
 // ----------------------------------------------------------------------
@@ -323,12 +307,11 @@ $news_events = [
 // ----------------------------------------------------------------------
 $contact_info = [
     'address'   => 'KST Samaun Samadikun, Bandung, West Java, Indonesia',
-    'email'     => 'ialvi.prima@brin.go.id',
+    'email'     => 'erma005@brin.go.id',
     'phone'     => null,
     'map_embed' => 'https://maps.google.com/maps?q=-6.8819068,107.6111792&z=17&output=embed',
     'socials'   => [
-        ['platform' => 'Instagram', 'url' => '#'],
-        ['platform' => 'LinkedIn',  'url' => '#'],
+        ['platform' => 'Instagram', 'url' => 'https://instagram.com/asiclivar.indonesia'],
     ],
 ];
 
@@ -337,27 +320,28 @@ $contact_info = [
 //    Dikelompokkan berdasarkan kategori mitra.
 // ----------------------------------------------------------------------
 $stakeholder_categories = [
-    'industry'   => 'Industry & Business Partners',
-    'government' => 'Government & Ministry Partners',
+    'industry_present' => 'Present Partners',
+    'industry_past'     => 'Past Partners',
+    'government'        => 'Government & Ministry Partners',
 ];
- 
+
 $stakeholders = [
-    // --- Industry & Business Partners ---
+    // --- Present Partners (industry) ---
     // CATATAN: 'logo' => null berarti belum ada file logo, card akan
     // fallback tampil nama teks saja. Isi dengan nama file di
     // assets/img/stakeholders/<file> begitu logo asli tersedia.
-    ['name' => 'PT. MTS',        'sector' => 'Climate Smart & Precision Agriculture', 'category' => 'industry', 'logo' => 'pt-mts.png'],
-    ['name' => 'PT. EWINDO',     'sector' => 'Climate Modelling for Food Security',    'category' => 'industry', 'logo' => 'pt-ewindo.png'],
-    ['name' => 'PT. PLN',        'sector' => 'Weather & Climate Modelling for Operational Safety and Renewable Energy', 'category' => 'industry', 'logo' => 'pt-pln.png'],
-    ['name' => 'PT. MHU',        'sector' => 'Weather & Climate Modelling for Operational Safety and Renewable Energy', 'category' => 'industry', 'logo' => 'pt-mhu.png'],
-    ['name' => 'PHE Pertamina',  'sector' => 'Ocean-Fisheries-Coastal Prediction Systems', 'category' => 'industry', 'logo' => 'pt-phe-pertamina.png'],
-    ['name' => 'SIGN',           'sector' => 'Ocean-Fisheries-Coastal Prediction Systems', 'category' => 'industry', 'logo' => 'pt-sign.png'],
-    ['name' => 'DATATEC',        'sector' => 'Weather and Seasonal Prediction Systems for Planning and Safety Transportation', 'category' => 'industry', 'logo' => 'pt-datatec.png'],
-    ['name' => 'KAMSELINDO',     'sector' => 'Weather and Seasonal Prediction Systems for Planning and Safety Transportation', 'category' => 'industry', 'logo' => 'kamselindo.png'],
- 
-   // --- Government & Ministry Partners ---
-    ['name' => 'BMKG',     'sector' => 'Accurate Atmospheric Information', 'category' => 'government', 'logo' => 'bmkg.png'],
-    ['name' => 'BNPB',     'sector' => 'Disaster Early Warning',           'category' => 'government', 'logo' => 'bnpb.png'],
-    ['name' => 'KEMENTAN', 'sector' => 'Precision Agriculture',            'category' => 'government', 'logo' => 'kementan.png'],
-    ['name' => 'KKP',      'sector' => 'Maritime Productivity',            'category' => 'government', 'logo' => 'kkp.png'],
-  ];
+    ['name' => 'PT. EWINDO',     'sector' => 'Climate Modelling for Food Security',    'category' => 'industry_present', 'logo' => 'pt-ewindo.png'],
+    ['name' => 'PT. PLN',        'sector' => 'Weather & Climate Modelling for Operational Safety and Renewable Energy', 'category' => 'industry_present', 'logo' => 'pt-pln.png'],
+    ['name' => 'PT. MHU',        'sector' => 'Weather & Climate Modelling for Operational Safety and Renewable Energy', 'category' => 'industry_present', 'logo' => 'pt-mhu.png'],
+    ['name' => 'PHE Pertamina',  'sector' => 'Ocean-Fisheries-Coastal Prediction Systems', 'category' => 'industry_present', 'logo' => 'pt-phe-pertamina.png'],
+    ['name' => 'SIGN',           'sector' => 'Ocean-Fisheries-Coastal Prediction Systems', 'category' => 'industry_present', 'logo' => 'pt-sign.png'],
+    ['name' => 'DATATEC',        'sector' => 'Weather and Seasonal Prediction Systems for Planning and Safety Transportation', 'category' => 'industry_present', 'logo' => 'pt-datatec.png'],
+    ['name' => 'KAMSELINDO',     'sector' => 'Weather and Seasonal Prediction Systems for Planning and Safety Transportation', 'category' => 'industry_present', 'logo' => 'kamselindo.png'],
+    ['name' => 'PT. Mega Inovasi Organik', 'sector' => 'Sector to be confirmed', 'category' => 'industry_present', 'logo' => 'pt-mio.png'],
+
+    // --- Past Partners (industry) ---
+    ['name' => 'PT. MTS', 'sector' => 'Climate Smart & Precision Agriculture', 'category' => 'industry_past', 'logo' => 'pt-mts.png'],
+
+    ['name' => 'BNPB', 'sector' => 'Disaster Early Warning', 'category' => 'government', 'logo' => 'bnpb.png'],
+    ['name' => 'KKP',  'sector' => 'Maritime Productivity',  'category' => 'government', 'logo' => 'kkp.png'],
+];
