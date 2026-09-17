@@ -41,6 +41,12 @@ $nav_items = [
   <nav class="navbar">
     <a href="index.php" class="navbar__brand">
       
+    <!-- <img 
+    src="assets/img/logos/logo-ialvi.jpg" 
+    alt="Logo IALVI"
+    class="navbar__logo"
+> -->
+
       <!-- Mulai Logo SVG IALVI (Hanya Ikon) -->
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 100" width="45" height="45" style="margin-right: 12px; flex-shrink: 0;">
         <defs>

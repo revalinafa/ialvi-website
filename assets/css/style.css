@@ -1546,3 +1546,11 @@ img {
     border-radius: var(--radius);
   }
 }
+
+.navbar__logo {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
