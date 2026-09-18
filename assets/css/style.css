@@ -305,6 +305,19 @@ img {
   overflow: hidden;
   box-shadow: 0 12px 32px rgba(22, 50, 79, 0.14);
 }
+/* The hero slide's <img> is now wrapped in an <a> (links to gallery.php) —
+   make the link fill the slide exactly like the image did before. */
+.hero-slider__slide a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-slider__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 @media (max-width: 860px) {
   .hero__grid {

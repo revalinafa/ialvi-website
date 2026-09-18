@@ -1,9 +1,12 @@
 <?php
 require_once 'config/data.php';
 require_once 'config/publications.php';
+require_once 'config/gallery.php';
 $page_title  = 'Home';
 $active_page = 'home';
 
+$hero_slider_images = array_values(array_filter($gallery_items, fn($item) => $item['type'] === 'image'));
+$hero_slider_images = array_slice($hero_slider_images, 0, 5); // limit to 5 slidess
 // ----------------------------------------------------------------------
 // Fetch the 3 most recent publications (across ALL categories) for the
 // "Climate Interaction & Featured Publications" story block.
@@ -23,6 +26,7 @@ $top_publications = array_slice($all_publications_flat, 0, 3);
 include 'includes/header.php';
 ?>
 
+
 <!-- HERO SECTION -->
 <section class="hero">
   <div class="container hero__grid">
@@ -38,15 +42,14 @@ include 'includes/header.php';
     <div class="hero__image">
       <div class="hero-slider" id="heroSlider">
         <div class="hero-slider__track" id="heroSliderTrack">
-          <div class="hero-slider__slide">
-            <img src="assets/img/hero/earth-ocean-atmosphere.jpg" alt="Earth, ocean, and atmosphere imagery">
-          </div>
-          <div class="hero-slider__slide">
-            <img src="assets/img/hero/satellite-observation.jpg" alt="Satellite atmospheric observation">
-          </div>
-          <div class="hero-slider__slide">
-            <img src="assets/img/hero/ocean-monitoring.jpg" alt="Ocean monitoring system">
-          </div>
+          <?php foreach ($hero_slider_images as $item): ?>
+            <div class="hero-slider__slide">
+              <a href="gallery.php" aria-label="View this photo in our gallery">
+                <img src="assets/img/gallery/<?php echo htmlspecialchars($item['image']); ?>"
+                     alt="<?php echo htmlspecialchars($item['caption']); ?>">
+              </a>
+            </div>
+          <?php endforeach; ?>
         </div>
 
         <button class="hero-slider__nav hero-slider__nav--prev" id="heroSliderPrev" aria-label="Previous slide">&#10094;</button>
@@ -192,9 +195,9 @@ include 'includes/header.php';
         <p class="innovation__desc">Maritime Forecasting System</p>
       </div>
       <div class="innovation__item">
-        <img class="innovation__logo" src="assets/img/logos/dss-nakula.png" alt="NAKULA logo">
-        <h3 class="innovation__name">NAKULA</h3>
-        <p class="innovation__desc">AI-Based Extreme Weather Prediction</p>
+        <img class="innovation__logo" src="assets/img/logos/dss-antasena.png" alt="ANTASENA logo">
+        <h3 class="innovation__name">ANTASENA</h3>
+        <p class="innovation__desc">Salt Pond Almanac Center</p>
       </div>
     </div>
 
@@ -225,7 +228,7 @@ include 'includes/header.php';
   </div>
 </section>
 
-<!-- NEWS SECTION (TETAP) -->
+<!-- NEWS SECTION -->
 <section class="section section--muted">
   <div class="container">
     <div class="section__head">
@@ -233,21 +236,16 @@ include 'includes/header.php';
       <p>Latest updates on discussions and capacity-building activities at
          ASICLIVAR.</p>
     </div>
-
     <div class="news__grid">
       <?php
       $today    = strtotime('today');
       $is_past  = fn($e) => strtotime($e['date_end'] ?? $e['date']) < $today;
       $poster_events = array_filter($news_events, fn($e) => empty($e['speaker']) && empty($e['software']));
-
       $home_upcoming = array_filter($poster_events, fn($e) => !$is_past($e));
       $home_past     = array_filter($poster_events, $is_past);
-
       usort($home_upcoming, fn($a, $b) => strtotime($a['date']) <=> strtotime($b['date']));
       usort($home_past,     fn($a, $b) => strtotime($b['date']) <=> strtotime($a['date']));
-
       $latest_news = array_slice(array_merge($home_upcoming, $home_past), 0, 3);
-
       foreach ($latest_news as $event):
         $start = strtotime($event['date']);
         $end   = !empty($event['date_end']) ? strtotime($event['date_end']) : null;
@@ -255,7 +253,8 @@ include 'includes/header.php';
             ? htmlspecialchars(date('d', $start)) . '&ndash;' . htmlspecialchars(date('d M Y', $end))
             : htmlspecialchars(date('d M Y', $start));
       ?>
-        <article class="news-card">
+        <!-- MENGUBAH <article> MENJADI <a> -->
+        <a href="news.php" class="news-card" style="text-decoration: none; color: inherit; display: block; transition: transform 0.3s ease;">
           <?php if (!empty($event['image'])): ?>
             <div class="news-card__thumb"
                  style="background-image: url('assets/img/news/<?php echo htmlspecialchars($event['image']); ?>');"></div>
@@ -265,7 +264,7 @@ include 'includes/header.php';
             <h3 class="news-card__title"><?php echo htmlspecialchars($event['title']); ?></h3>
             <p class="news-card__excerpt"><?php echo htmlspecialchars($event['description']); ?></p>
           </div>
-        </article>
+        </a>
       <?php endforeach; ?>
     </div>
   </div>
