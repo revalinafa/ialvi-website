@@ -1,15 +1,34 @@
 <?php
 require_once 'config/data.php';
+require_once 'config/publications.php';
 $page_title  = 'Home';
 $active_page = 'home';
+
+// ----------------------------------------------------------------------
+// Fetch the 3 most recent publications (across ALL categories) for the
+// "Climate Interaction & Featured Publications" story block.
+// ----------------------------------------------------------------------
+$all_publications_flat = [];
+foreach ($publications as $cat_key => $category) {
+    foreach ($category['items'] as $pub) {
+        if (!empty($pub['year'])) {
+            $pub['category_label'] = $category['label'];
+            $all_publications_flat[] = $pub;
+        }
+    }
+}
+usort($all_publications_flat, fn($a, $b) => $b['year'] <=> $a['year']);
+$top_publications = array_slice($all_publications_flat, 0, 3);
+
 include 'includes/header.php';
 ?>
 
+<!-- HERO SECTION -->
 <section class="hero">
   <div class="container hero__grid">
     <div>
       <div class="hero__eyebrow">National Research and Innovation Agency</div>
-      <h1>Understanding Air-Sea Interaction Across the Indonesian Maritime Continent</h1>
+      <h1>Air&ndash;Sea Interaction &amp; Climate Variability Across the Indonesian Maritime Continent</h1>
       <p>We study how the ocean and atmosphere interact over Indonesia's equatorial
          maritime continent, turning observation and modeling into decision support
          systems (DSS) that serve the nation.</p>
@@ -39,51 +58,120 @@ include 'includes/header.php';
   </div>
 </section>
 
-<section class="section">
-  <div class="container">
-    <div class="section__head">
-      <h2>Discover Our Research Story</h2>
-      <p>From ocean-atmosphere dynamics to real-world impact &mdash; see how our
-         research unfolds across three interconnected stories.</p>
-    </div>
+<!-- STORYTELLING SECTION -->
+<section class="storytelling-section">
 
-    <div class="story-grid">
-      <a href="about.php" class="story-card">
-        <div class="story-card__image"
-             style="background-image: url('assets/img/story/air-sea-interaction.jpg');"></div>
-        <div class="story-card__overlay">
-          <h3 class="story-card__title">Air-Sea Interaction</h3>
-          <p class="story-card__caption">How ocean and atmosphere shape each other
-             across the equatorial maritime continent.</p>
-          <span class="story-card__link">Discover the story &rarr;</span>
-        </div>
-      </a>
+  <!-- Story 1 & 2: Air-Sea Interaction + Climate Interaction, side-by-side, text-only -->
+  <div class="story-duo" data-reveal>
+    <div class="container story-duo__grid">
 
-      <a href="publication.php" class="story-card">
-        <div class="story-card__image"
-             style="background-image: url('assets/img/story/climate-interaction.jpg');"></div>
-        <div class="story-card__overlay">
-          <h3 class="story-card__title">Climate Interaction &amp; Publications</h3>
-          <p class="story-card__caption">Published findings on climate variability
-             and its cascading effects across the region.</p>
-          <span class="story-card__link">Discover the story &rarr;</span>
-        </div>
-      </a>
+      <div class="story-duo__col">
+        <span class="story-block__eyebrow">Fundamental Science</span>
+        <h2 class="story-block__title">Air&ndash;Sea Interaction</h2>
+        <p class="story-block__desc">
+          Beneath the calm surface of Indonesia's equatorial waters lies a
+          constant exchange &mdash; heat, moisture, and momentum moving between
+          ocean and atmosphere. We study these dynamics to understand how the
+          maritime continent shapes weather far beyond its shores.
+        </p>
+        <a href="about.php" class="story-link">Discover the science</a>
+      </div>
 
-      <a href="about.php" class="story-card">
-        <div class="story-card__image"
-             style="background-image: url('assets/img/story/asiclivar-business-process.jpg');"></div>
-        <div class="story-card__overlay">
-          <h3 class="story-card__title">The Business Process of ASICLIVAR</h3>
-          <p class="story-card__caption">From observation to knowledge, prediction,
-             and DSS/T &mdash; see how research becomes real-world impact.</p>
-          <span class="story-card__link">Discover the story &rarr;</span>
-        </div>
-      </a>
+      <div class="story-duo__divider" aria-hidden="true"></div>
+
+      <div class="story-duo__col">
+        <span class="story-block__eyebrow">Climate Variability</span>
+        <h2 class="story-block__title">Climate Interaction</h2>
+        <p class="story-block__desc">
+          Our findings on climate variability ripple outward &mdash; from local
+          rainfall patterns to regional flood and drought risk. Every insight
+          deepens our understanding of a rapidly changing climate system.
+        </p>
+        <a href="about.php" class="story-link">Explore our findings</a>
+      </div>
+
     </div>
   </div>
+
+<!-- Featured Publications — belongs to the whole research group, not one story -->
+<div class="story-publications" data-reveal>
+  <div class="container story-publications__grid">
+
+    <div class="story-publications__head">
+      <span class="story-block__eyebrow">Research Output</span>
+      <h2 class="story-block__title">Featured Publications</h2>
+      <p class="story-block__desc">
+        A selection of recent work from the Air&ndash;Sea Interaction &amp;
+        Climate Variability Research Group.
+      </p>
+    </div>
+
+    <div class="story-publications__body">
+      <ul class="story-pub-list">
+        <?php foreach ($top_publications as $pub): ?>
+          <li class="story-pub-list__item">
+            <span class="story-pub-list__year"><?php echo htmlspecialchars($pub['year']); ?></span>
+            <div class="story-pub-list__body">
+              <p class="story-pub-list__title"><?php echo htmlspecialchars($pub['title']); ?></p>
+              <p class="story-pub-list__venue"><?php echo htmlspecialchars($pub['venue']); ?></p>
+            </div>
+          </li>
+        <?php endforeach; ?>
+      </ul>
+
+      <a href="publication.php" class="story-link">View all publications</a>
+    </div>
+
+  </div>
+</div>
+
+  <!-- Story 3: The Business Process of ASICLIVAR + Stakeholder Marquee (TIDAK DIUBAH) -->
+  <div class="story-block story-block--left" data-reveal>
+    <div class="container story-block__grid">
+      <div class="story-block__text">
+        <span class="story-block__eyebrow">From Observation to Impact</span>
+        <h2 class="story-block__title">The Business Process of ASICLIVAR</h2>
+        <p class="story-block__desc">
+          Observation becomes knowledge. Knowledge becomes prediction. Prediction
+          becomes a Decision Support System (DSS) &mdash; a transformation that
+          turns raw atmospheric data into tools policymakers and communities can
+          act on.
+        </p>
+        <a href="about.php" class="story-link">See how it works</a>
+      </div>
+      <div class="story-block__media story-block__media--diagram">
+        <img src="assets/img/story/asiclivar-business-process.jpg" alt="Business process diagram of ASICLIVAR, from input to impact">
+      </div>
+    </div>
+  </div>
+
+  <!-- Infinite Stakeholder Marquee (TIDAK DIUBAH) -->
+  <div class="story-marquee-wrap" data-reveal>
+    <div class="container" style="text-align: center;">
+      <p class="story-marquee__label">Trusted by government agencies, industry, and research partners</p>
+    </div>
+
+    <div class="marquee">
+      <div class="marquee__track">
+        <?php
+        for ($repeat = 0; $repeat < 2; $repeat++):
+            foreach ($stakeholders as $stakeholder):
+        ?>
+          <a href="stakeholder.php" class="marquee__item" title="<?php echo htmlspecialchars($stakeholder['name']); ?>">
+            <img src="assets/img/stakeholders/<?php echo htmlspecialchars($stakeholder['logo']); ?>"
+                 alt="<?php echo htmlspecialchars($stakeholder['name']); ?> logo">
+          </a>
+        <?php
+            endforeach;
+        endfor;
+        ?>
+      </div>
+    </div>
+  </div>
+
 </section>
 
+<!-- INNOVATIONS SECTION (TETAP) -->
 <section class="section section--muted">
   <div class="container">
     <div class="section__head">
@@ -116,6 +204,7 @@ include 'includes/header.php';
   </div>
 </section>
 
+<!-- OPPORTUNITIES SECTION (TETAP) -->
 <section class="section">
   <div class="container">
     <div class="callout">
@@ -136,6 +225,7 @@ include 'includes/header.php';
   </div>
 </section>
 
+<!-- NEWS SECTION (TETAP) -->
 <section class="section section--muted">
   <div class="container">
     <div class="section__head">
@@ -146,8 +236,6 @@ include 'includes/header.php';
 
     <div class="news__grid">
       <?php
-      // Ambil hanya entri bergaya poster (bukan seri Events Schedule/bootcamp
-      // tabel), sama seperti logika "Upcoming Events" & "Events" di news.php.
       $today    = strtotime('today');
       $is_past  = fn($e) => strtotime($e['date_end'] ?? $e['date']) < $today;
       $poster_events = array_filter($news_events, fn($e) => empty($e['speaker']) && empty($e['software']));
@@ -158,7 +246,6 @@ include 'includes/header.php';
       usort($home_upcoming, fn($a, $b) => strtotime($a['date']) <=> strtotime($b['date']));
       usort($home_past,     fn($a, $b) => strtotime($b['date']) <=> strtotime($a['date']));
 
-      // Prioritaskan upcoming dulu, baru past, total 3 kartu.
       $latest_news = array_slice(array_merge($home_upcoming, $home_past), 0, 3);
 
       foreach ($latest_news as $event):
@@ -183,5 +270,24 @@ include 'includes/header.php';
     </div>
   </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Fade-in-up scroll reveal for storytelling blocks
+  var revealEls = document.querySelectorAll('[data-reveal]');
+  if (!revealEls.length) return;
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target); // reveal once, don't re-hide on scroll up
+      }
+    });
+  }, { threshold: 0.15 });
+
+  revealEls.forEach(function (el) { observer.observe(el); });
+});
+</script>
 
 <?php include 'includes/footer.php'; ?>

@@ -461,76 +461,284 @@ img {
 .hero-slider__dot.is-active {
   background: var(--foam);
 }
-
-/* ---------- VISUAL STORYTELLING (Home) ---------- */
-.story-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+/* ---------- STORYTELLING SECTION (Home) — no cards, alternating layout ---------- */
+.storytelling-section {
+  padding: 40px 0 20px;
 }
 
-.story-card {
+.story-block {
+  padding: 90px 0;
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.story-block.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.story-block__grid {
+  display: flex;
+  align-items: flex-start;
+  gap: 130px;
+}
+
+.story-block--right .story-block__grid {
+  flex-direction: row-reverse;
+}
+
+.story-block__text {
+  flex: 0 0 420px; /* fixed-width column, same pattern as .story-publications__head */
+}
+
+.story-block__media {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.story-block__desc {
+  font-size: 1.05rem;
+  color: var(--ink);
+  line-height: 1.75;
+  margin-bottom: 28px;
+  /* max-width: 46ch; ← dihapus, karena kolom teks sekarang sudah dibatasi oleh flex-basis 320px di atas */
+}
+
+/* The business-process diagram is dense with text, so it stays uncropped
+   and sits on a soft neutral backdrop rather than filling a fixed frame. */
+.story-block__media--diagram {
+  background: var(--mist);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.story-block__media--diagram img {
+  border-radius: 2px;
+}
+
+/* Elegant text link — no button shape, animated underline instead */
+.story-link {
   position: relative;
-  display: block;
-  aspect-ratio: 3 / 4;
-  border-radius: var(--radius);
-  overflow: hidden;
-  background: var(--mist) center/cover no-repeat;
+  display: inline-block;
+  color: var(--deep-ocean);
+  font-weight: 600;
+  font-size: 0.95rem;
   text-decoration: none;
+  padding-bottom: 3px;
 }
 
-.story-card__image {
+.story-link::after {
+  content: '';
   position: absolute;
-  inset: 0;
-  background: var(--mist) center/cover no-repeat;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--sea-blue);
+  transform: scaleX(0);
+  transform-origin: right;
   transition: transform 0.3s ease;
 }
 
-.story-card:hover .story-card__image {
-  transform: scale(1.05);
+.story-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
-.story-card__overlay {
-  position: absolute;
-  inset: 0;
+.story-link:hover { text-decoration: none; }
+
+/* ---------- Minimalist publication list (Story 2) — no cards ---------- */
+.story-pub-list {
+  list-style: none;
+  margin: 0 0 28px;
+  padding: 0;
+  max-width: 52ch;
+}
+
+.story-pub-list__item {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 22px;
-  background: linear-gradient(
-    180deg,
-    rgba(22, 50, 79, 0) 40%,
-    rgba(22, 50, 79, 0.88) 100%
-  );
+  gap: 18px;
+  padding: 18px 0;
+  border-top: 1px solid var(--border);
 }
 
-.story-card__title {
-  color: var(--foam);
-  font-size: 1.1rem;
-  margin-bottom: 6px;
+.story-pub-list__item:last-child {
+  border-bottom: 1px solid var(--border);
 }
 
-.story-card__caption {
-  color: #dce9f2;
-  font-size: 0.82rem;
-  margin: 0 0 10px;
-  max-width: none;
+.story-pub-list__year {
+  flex: 0 0 auto;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--sea-blue);
+  padding-top: 2px;
 }
 
-.story-card__link {
-  color: var(--foam);
-  font-size: 0.82rem;
+.story-pub-list__body { min-width: 0; }
+
+.story-pub-list__title {
+  font-family: var(--font-head);
+  font-size: 1rem;
   font-weight: 600;
-  text-decoration: underline;
+  color: var(--deep-ocean);
+  margin: 0 0 4px;
+  line-height: 1.4;
+}
+
+.story-pub-list__venue {
+  font-size: 0.82rem;
+  font-style: italic;
+  color: var(--slate);
+  margin: 0;
 }
 
 @media (max-width: 860px) {
-  .story-grid {
-    grid-template-columns: 1fr;
+  .story-block { padding: 60px 0; }
+  .story-block__grid {
+    flex-direction: column;
   }
-  .story-card {
-    aspect-ratio: 16 / 10;
+  .story-block__text {
+    flex: none; /* lepas lebar tetap 320px saat sudah ditumpuk vertikal */
   }
+  .story-block__title { font-size: 1.7rem; }
+}
+/* ---------- STORY DUO — Story 1 & 2 side-by-side, text-only ---------- */
+.story-duo {
+  padding: 90px 0 60px;
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.story-duo.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.story-duo__grid {
+  display: flex;
+  align-items: flex-start;
+  gap: 64px;
+}
+
+.story-duo__col {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.story-duo__divider {
+  flex: 0 0 auto;
+  width: 1px;
+  align-self: stretch;
+  background: var(--border);
+}
+
+@media (max-width: 860px) {
+  .story-duo__grid {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .story-duo__divider {
+    width: 100%;
+    height: 1px;
+  }
+}
+
+/* ---------- FEATURED PUBLICATIONS — standalone section, left text / right list ---------- */
+.story-publications {
+  padding: 40px 0 90px;
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.story-publications.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.story-publications__grid {
+  display: flex;
+  align-items: flex-start;
+  gap: 130px;
+}
+
+.story-publications__head {
+  flex: 0 0 420px; /* fixed-ish narrow column for the short intro text */
+}
+
+.story-publications__body {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+@media (max-width: 860px) {
+  .story-publications__grid {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .story-publications__head {
+    flex: none;
+  }
+}
+/* ---------- INFINITE STAKEHOLDER MARQUEE ---------- */
+.story-marquee-wrap {
+  padding: 50px 0 70px;
+}
+
+.story-marquee__label {
+  color: var(--slate);
+  font-size: 1.2rem;
+  margin: 0 0 32px;
+  justify-content: center;
+
+}
+
+.marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+}
+
+.marquee__track {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  width: max-content;
+  animation: marquee-scroll 34s linear infinite;
+}
+
+.marquee:hover .marquee__track {
+  animation-play-state: paused;
+}
+
+.marquee__item {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  opacity: 0.5;
+  filter: grayscale(100%);
+  transition: opacity 0.2s ease, filter 0.2s ease;
+}
+
+.marquee__item:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+.marquee__item img {
+  height: 100%;
+  width: auto;
+  max-width: 130px;
+  object-fit: contain;
+}
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
 
 /* ---------- PROGRAM BOX (Visiting Professor / Exchange) ---------- */
