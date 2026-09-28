@@ -1775,3 +1775,67 @@ img {
     margin-right: 12px;
     flex-shrink: 0;
 }
+
+/* ---------- PERSON DETAIL (person.php) ---------- */
+.person-detail {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.person-detail__photo {
+  aspect-ratio: 4 / 5;
+  background: var(--mist) top center/cover no-repeat;
+  background-image: var(--photo-url);
+  border-radius: var(--radius);
+}
+
+.person-detail__name {
+  margin-bottom: 4px;
+}
+
+.person-detail__role {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--sea-blue);
+  margin-bottom: 4px;
+}
+
+.person-detail__note {
+  color: var(--slate);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.person-detail__bio {
+  margin-bottom: 24px;
+}
+
+.person-detail__meta {
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+.person-detail__meta dt {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--slate);
+  margin-top: 12px;
+}
+
+.person-detail__meta dd {
+  margin: 2px 0 0;
+}
+
+@media (max-width: 700px) {
+  .person-detail {
+    grid-template-columns: 1fr;
+  }
+  .person-detail__photo {
+    max-width: 280px;
+  }
+}
+ 
