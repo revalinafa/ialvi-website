@@ -190,28 +190,6 @@ $extra_programs = [
     ],
 ];
 
-// ----------------------------------------------------------------------
-// 4. DECISION SUPPORT SYSTEMS (for the About page)
-// ----------------------------------------------------------------------
-$dss_list = [
-    // 'featured' => true → shown in the zig-zag grid on the About page
-    ['slug' => 'semar',    'name' => 'SEMAR',    'tagline' => 'Maritime Forecasting System', 'desc' => 'Provides real-time vessel position, potential fishing zone data, marine and atmospheric weather, and radio communication frequency information to ensure sailing safety and boost capture fisheries production.', 'image' => 'semar.jpg', 'featured' => true],
-    ['slug' => 'arjuna',   'name' => 'ARJUNA',   'tagline' => 'Short-to-Medium Term Flood Risk Analysis for Indonesian Climate Change Anticipation', 'desc' => 'A hydrometeorological early warning system providing high-resolution weather-to-seasonal monitoring and prediction at specific sites, delivering daily forecasts up to six months ahead for flood disaster preparedness.', 'image' => 'arjuna.jpg', 'featured' => true],
-    ['slug' => 'antasena', 'name' => 'ANTASENA', 'tagline' => 'Salt Pond Almanac Center', 'desc' => 'Provides recommendations on optimal embankment and harvesting timing for salt ponds based on rainfall predictions, helping salt farmers determine the best production schedule.', 'image' => 'antasena.jpg', 'featured' => true],
-    ['slug' => 'kamajaya', 'name' => 'KAMAJAYA', 'tagline' => 'Medium-Term Early Season Assessment for the Indonesian Region', 'desc' => 'Provides high-resolution atmospheric observation and prediction (weather, onset of season, climate variability) across all of Indonesia to support Smart Farming and Precision Farming.', 'image' => 'kamajaya.jpg', 'featured' => true],
-    ['slug' => 'kresna',   'name' => 'KRESNA',   'tagline' => 'Knowledge of Risk and Early Drought-Fire Warning System for Needed Action', 'desc' => 'Provides drought and land-fire risk indices (Drought Hazard Index, Fire Hazard Index, and a combined index) to support forest and land fire preparedness and mitigation.', 'image' => 'kresna.jpg', 'featured' => true],
-
-    ['slug' => 'srikandi', 'name' => 'SRIKANDI', 'tagline' => 'Indonesian Atmospheric Composition Information System', 'desc' => 'Air quality monitoring from satellite sensors and atmospheric chemistry models.', 'image' => 'srikandi.jpg', 'featured' => false],
-    ['slug' => 'santanu',  'name' => 'SANTANU',  'tagline' => 'Spatial Rainfall Monitoring System', 'desc' => 'High-resolution rainfall detection based on X-Band radar.', 'image' => 'santanu.jpg', 'featured' => false],
-    ['slug' => 'jatayu',   'name' => 'JATAYU',   'tagline' => 'Atmospheric Observation Network for Air Transportation', 'desc' => 'Atmospheric dynamics prediction to support air transportation safety.', 'image' => 'jatayu.jpg', 'featured' => false],
-    ['slug' => 'srirama',  'name' => 'SRIRAMA',  'tagline' => 'Indonesian Climate Change Information System', 'desc' => 'Projections of Indonesian climate change up to 100 years ahead.', 'image' => 'srirama.jpg', 'featured' => false],
-    ['slug' => 'indra',    'name' => 'INDRA',    'tagline' => 'Water Resource Input Data', 'desc' => 'A Decision Support Tool for Smart Water Management Systems.', 'image' => 'indra.jpg', 'featured' => false],
-    ['slug' => 'gatotkaca','name' => 'GATOTKACA','tagline' => 'GNSS for Atmospheric Observation and Tracking Climate Change', 'desc' => 'Atmospheric profile observation using radio occultation techniques.', 'image' => 'gatotkaca.jpg', 'featured' => false],
-];
-
-// ----------------------------------------------------------------------
-// 5. NEWS & EVENTS
-// ----------------------------------------------------------------------
 $news_events = [
  
     [
@@ -242,28 +220,14 @@ $news_events = [
         'slug'        => 'bootcamp-tornado-data-processing',
         'title'       => 'Tornado Data Processing and Analysis',
         'type'        => 'bootcamp',
-        'date'        => '2026-10-01',
-        'time'        => '13:00 WIB',
-        'location'    => 'Online (Google Meet)',
-        'speaker'     => 'Sanaullah Zehri',
-        'software'    => 'Jupyter',
-        'description' => 'Earth Sciences Bootcamp session on tornado data processing and analysis.',
-        'image'       => null,
+        'date'        => '2026-09-30',
+        'time'        => '13:00 - 16:00 WIB',
+        'location'    => 'Meeting Room 80.3, BRIN KST Samaun Samadikun, Bandung',
+        'description' => 'A hands-on introductory session for students and researchers to learn how to process and analyze tornado-related data using Jupyter Notebook, with practical workflows for Earth and atmospheric science research. Presented by Sanaullah Zehri, Research Assistant.',
+        'image'       => 'tornado.jpeg',
         'link'        => null,
     ],
-    [
-        'slug'        => 'bootcamp-statistical-properties',
-        'title'       => 'Statistical Properties for Atmospheric Sciences',
-        'type'        => 'bootcamp',
-        'date'        => '2026-09-29',
-        'time'        => '09:00 - 12:00 WIB',
-        'location'    => 'Online (Google Meet)',
-        'speaker'     => 'Suaydhi',
-        'software'    => 'Jupyter',
-        'description' => 'Earth Sciences Bootcamp session on statistical properties for atmospheric sciences.',
-        'image'       => null,
-        'link'        => null,
-    ],
+    
     [
         'slug'        => 'bootcamp-mahameru-hpc',
         'title'       => 'How to Access Mahameru HPC',
