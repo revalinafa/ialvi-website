@@ -309,3 +309,55 @@ $stakeholders = [
     ['name' => 'BNPB', 'sector' => 'Disaster Early Warning', 'category' => 'government', 'logo' => 'bnpb.png'],
     ['name' => 'KKP',  'sector' => 'Maritime Productivity',  'category' => 'government', 'logo' => 'kkp.png'],
 ];
+
+$dss_list = [
+    [
+        'name'     => 'SADEWA',
+        'tagline'  => 'Satellite Disaster Early Warning System',
+        'desc'     => 'Monitors and predicts extreme rainfall events that potentially cause floods and landslides across Indonesia.',
+        'image'    => 'sadewa.jpg',
+        'featured' => true
+    ],
+    [
+        'name'     => 'SEMAR',
+        'tagline'  => 'Maritime Forecasting System',
+        'desc'     => 'Delivers real-time information on ship positions, fishing zones, and marine weather to ensure maritime safety and productivity.',
+        'image'    => 'semar.jpg',
+        'featured' => true
+    ],
+    [
+        'name'     => 'KAMAJAYA',
+        'tagline'  => 'Medium-Term Early Season Assessment',
+        'desc'     => 'Provides high-resolution atmospheric observations and predictions to support smart farming and food security across the region.',
+        'image'    => 'kamajaya.jpg',
+        'featured' => true
+    ],
+    [
+        'name'     => 'NAKULA',
+        'tagline'  => 'AI-Based Extreme Weather Prediction',
+        'desc'     => 'An advanced high-resolution weather prediction model integrating deep learning for hydrometeorological disaster mitigation.',
+        'image'    => 'nakula.jpg',
+        'featured' => true
+    ],
+    [
+        'name'     => 'ANTASENA',
+        'tagline'  => 'Salt Pond Almanac',
+        'desc'     => 'Provides weather recommendations and dry day forecasts specifically designed to support national salt production.',
+        'image'    => 'antasena.jpg',
+        'featured' => true
+    ],
+    [
+        'name'     => 'KRESNA',
+        'tagline'  => 'Knowledge of Risk and Early Warning System',
+        'desc'     => 'An early warning system providing drought and fire hazard indices for needed mitigation actions.',
+        'image'    => 'kresna.jpg',
+        'featured' => true
+    ],
+    [
+        'name'     => 'ARJUNA',
+        'tagline'  => 'Short-to-Medium Term Flood Risk Analysis',
+        'desc'     => 'A localized early warning system utilizing affordable hydrometeorological instruments for real-time monitoring and forecasting.',
+        'image'    => 'arjuna.jpg',
+        'featured' => true
+    ]
+];
