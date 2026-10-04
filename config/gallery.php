@@ -66,7 +66,7 @@ $gallery_items = [
         'image'   => 'Djunjunan Data Center.jpg',
         'tag'     => 'Facility',
         'coord'   => 'Bandung, West Java',
-        'caption' => 'Djunjunan Data Center'
+        'caption' => 'Djunjunan Data Center - HPC Mahameru'
     ],
     [
         'type'    => 'image',
@@ -80,7 +80,7 @@ $gallery_items = [
         'image'   => 'hpc-server-room.jpg',
         'tag'     => 'Infrastructure',
         'coord'   => 'BRIN Data Center',
-        'caption' => 'High Performance Computing (HPC) Server Room'
+        'caption' => 'High Performance Computing (HPC) Mahameru Server Room'
     ],
     [
         'type'    => 'image',
@@ -194,5 +194,110 @@ $gallery_items = [
         'tag'     => 'Education',
         'coord'   => 'BRIN Bandung',
         'caption' => 'MBKM Students Research Activity'
+    ],
+    [
+        'type'    => 'image',
+        'image'   => 'gapki-meeting.jpg', // Sesuaikan nama file gambar Anda
+        'tag'     => 'Collaboration',
+        'coord'   => 'Meeting',
+        'caption' => 'Meeting with the Indonesian Palm Oil Association (GAPKI)'
+    ],
+    [
+        'type'    => 'image',
+        'image'   => 'sign-collaboration.jpg',
+        'tag'     => 'Collaboration',
+        'coord'   => 'SIGN System',
+        'caption' => 'Collaboration with SIGN Ocean-Fisheries-Coastal Prediction Systems'
+    ],
+    [
+        'type'    => 'image',
+        'image'   => 'kkp-meeting.jpg',
+        'tag'     => 'Government',
+        'coord'   => 'Ministry of Marine Affairs',
+        'caption' => 'Coordination with the Ministry of Marine Affairs and Fisheries (KKP)'
+    ],
+    [
+        'type'    => 'image',
+        'image'   => 'bnpb-meeting.jpg',
+        'tag'     => 'Government',
+        'coord'   => 'BNPB',
+        'caption' => 'Discussion with the National Disaster Management Agency (BNPB)'
+    ],
+    [
+        'type'    => 'image',
+        'image'   => 'bpbd-meeting.jpg',
+        'tag'     => 'Government',
+        'coord'   => 'BPBD',
+        'caption' => 'Synergy with the Regional Disaster Management Agency (BPBD)'
+    ],
+    [
+        'type'    => 'image',
+        'image'   => 'aws-ewindo-pandeglang.jpg',
+        'tag'     => 'Fieldwork',
+        'coord'   => 'Pandeglang, Banten',
+        'caption' => 'Instrument Installation: AWS Setup at PT Ewindo'
+    ],
+    [
+        'type'    => 'image',
+        'image'   => 'menara-pontianak.jpg',
+        'tag'     => 'Fieldwork',
+        'coord'   => 'Pontianak, West Kalimantan',
+        'caption' => 'Field Observation at Pontianak Tower'
+    ],
+    [
+        'type'    => 'image',
+        'image'   => 'pt-mts-sumatra.jpg',
+        'tag'     => 'Collaboration',
+        'coord'   => 'Sumatra',
+        'caption' => 'Strategic Meeting with PT Mitra Tanam Sejahtera (MTS)'
+    ],
+    [
+        'type'    => 'image',
+        'image'   => 'mou-pt-pks.jpg',
+        'tag'     => 'Collaboration',
+        'coord'   => 'MoU Signing',
+        'caption' => 'Memorandum of Understanding Signing Session with Palm Oil Mill Partners'
+    ],
+    [
+        'type'    => 'image',
+        'image'   => 'earth-school.jpg',
+        'tag'     => 'Education',
+        'coord'   => 'Earth School',
+        'caption' => 'Earth School Program Activities'
+    ],
+    [
+        'type'    => 'image',
+        'image'   => 'biweekly-esb-doc.jpg',
+        'tag'     => 'Seminar',
+        'coord'   => 'BRIN',
+        'caption' => 'Biweekly Seminar and Earth Sciences Bootcamp Documentation'
+    ],
+    [
+        'type'    => 'image',
+        'image'   => 'gathering-stakeholder.jpg',
+        'tag'     => 'Event',
+        'coord'   => 'Gathering',
+        'caption' => 'Gathering and Building Connections with Stakeholders'
+    ],
+    [
+        'type'    => 'image',
+        'image'   => 'mbkm-defense.jpg',
+        'tag'     => 'Education',
+        'coord'   => 'BRIN',
+        'caption' => 'MBKM Research Internship: Final Defense Sessions'
+    ],
+    [
+        'type'    => 'image',
+        'image'   => 'teaching-universities.jpg',
+        'tag'     => 'Education',
+        'coord'   => 'University Visit',
+        'caption' => 'Teaching and Supervising in Universities'
+    ],
+    [
+        'type'    => 'image',
+        'image'   => 'zmt-germany.jpg',
+        'tag'     => 'Collaboration',
+        'coord'   => 'ZMT Germany',
+        'caption' => 'Collaboration with Leibniz Centre for Tropical Marine Research (ZMT)'
     ]
 ];

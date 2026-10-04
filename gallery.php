@@ -4,11 +4,9 @@ require_once 'config/gallery.php';
 $page_title  = 'Gallery';
 $active_page = 'gallery';
 
-// Mock gallery data array (mix of photos and YouTube videos)
-// 'tag'   → small category label shown in the overlay (atmo.ai-style "telemetry" tag)
-// 'coord' → short location/context string shown under the tag
-// 'type'  => 'image'   → uses the 'image' field (path inside assets/img/gallery/)
-// 'type'  => 'youtube' → uses the 'youtube_id' field to auto-generate a thumbnail
+// Ekstrak semua tag unik dari array untuk membuat tombol filter secara dinamis
+$all_tags = array_unique(array_column($gallery_items, 'tag'));
+sort($all_tags); // Urutkan sesuai abjad
 
 include 'includes/header.php';
 ?>
@@ -24,11 +22,24 @@ include 'includes/header.php';
 
 <section class="section">
   <div class="container">
-    <div class="gallery-masonry">
-      <?php foreach ($gallery_items as $item): ?>
+    
+    <!-- GALLERY FILTER TABS -->
+    <div class="pub-tabs" id="galleryTabs" style="margin-bottom: 2rem; justify-content: center;">
+      <button class="pub-tabs__btn is-active" data-filter="all">All Items</button>
+      <?php foreach ($all_tags as $tag): ?>
+        <button class="pub-tabs__btn" data-filter="<?php echo htmlspecialchars($tag); ?>">
+          <?php echo htmlspecialchars($tag); ?>
+        </button>
+      <?php endforeach; ?>
+    </div>
 
-        <?php if ($item['type'] === 'youtube'): ?>
-          <div class="gallery-item">
+    <!-- MASONRY GRID -->
+    <div class="gallery-masonry" id="galleryGrid">
+      <?php foreach ($gallery_items as $item): ?>
+        <!-- Tambahkan atribut data-tag pada setiap item untuk target filter JS -->
+        <div class="gallery-item" data-tag="<?php echo htmlspecialchars($item['tag']); ?>">
+          
+          <?php if ($item['type'] === 'youtube'): ?>
             <a class="gallery-item__frame"
                href="https://www.youtube.com/watch?v=<?php echo urlencode($item['youtube_id']); ?>"
                target="_blank" rel="noopener noreferrer"
@@ -37,45 +48,65 @@ include 'includes/header.php';
                    src="https://img.youtube.com/vi/<?php echo urlencode($item['youtube_id']); ?>/maxresdefault.jpg"
                    alt="<?php echo htmlspecialchars($item['caption']); ?>"
                    loading="lazy">
-
               <span class="gallery-item__play" aria-hidden="true">
                 <svg viewBox="0 0 24 24" width="20" height="20">
                   <path d="M8 5v14l11-7z" fill="currentColor"/>
                 </svg>
               </span>
-
               <span class="gallery-item__corner" aria-hidden="true">&#8599;</span>
-
               <span class="gallery-item__overlay">
                 <span class="gallery-item__tag"><?php echo htmlspecialchars($item['tag']); ?></span>
                 <span class="gallery-item__coord"><?php echo htmlspecialchars($item['coord']); ?></span>
               </span>
             </a>
             <p class="gallery-item__caption"><?php echo htmlspecialchars($item['caption']); ?></p>
-          </div>
-
-        <?php else: ?>
-          <div class="gallery-item">
+            
+          <?php else: ?>
             <div class="gallery-item__frame">
               <img class="gallery-item__media"
                    src="assets/img/gallery/<?php echo htmlspecialchars($item['image']); ?>"
                    alt="<?php echo htmlspecialchars($item['caption']); ?>"
                    loading="lazy">
-
               <span class="gallery-item__corner" aria-hidden="true">&#8599;</span>
-
               <span class="gallery-item__overlay">
                 <span class="gallery-item__tag"><?php echo htmlspecialchars($item['tag']); ?></span>
                 <span class="gallery-item__coord"><?php echo htmlspecialchars($item['coord']); ?></span>
               </span>
             </div>
             <p class="gallery-item__caption"><?php echo htmlspecialchars($item['caption']); ?></p>
-          </div>
-        <?php endif; ?>
+          <?php endif; ?>
 
+        </div>
       <?php endforeach; ?>
     </div>
   </div>
 </section>
+
+<!-- SCRIPT UNTUK FILTER GALLERY -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const filterBtns = document.querySelectorAll('#galleryTabs .pub-tabs__btn');
+  const galleryItems = document.querySelectorAll('.gallery-item');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      // Hapus kelas aktif dari semua tombol, lalu tambahkan ke tombol yang diklik
+      filterBtns.forEach(b => b.classList.remove('is-active'));
+      this.classList.add('is-active');
+
+      const filterValue = this.getAttribute('data-filter');
+
+      // Tampilkan atau sembunyikan item berdasarkan tag
+      galleryItems.forEach(item => {
+        if (filterValue === 'all' || item.getAttribute('data-tag') === filterValue) {
+          item.style.display = 'block'; // Tampilkan
+        } else {
+          item.style.display = 'none';  // Sembunyikan
+        }
+      });
+    });
+  });
+});
+</script>
 
 <?php include 'includes/footer.php'; ?>
