@@ -57,9 +57,36 @@ $publications = [
     ],
 
     'intellectual_properties' => [
-        'label' => 'Intellectual Properties / Patents',
+        'label' => 'Intellectual Properties',
         'items' => [
-            ['year' => null, 'title' => 'Method for Predicting Potential Fishing Zones Based on Atmospheric and Ocean Numerical Models', 'authors' => null, 'venue' => 'Patent — Status: Published, No. S00202111390', 'link' => null],
+            [
+                'year'    => 2025, 
+                'title'   => 'Method for Predicting Potential Fishing Zones Based on Atmospheric and Ocean Numerical Models', 
+                'authors' => 'Erma Yulihastin, Suaydhi, Rahaden Bagas Hatmaja, Mochamad Furqon Azis Ismail', 
+                'venue'   => 'Patent Granted — No. IDS000010124', 
+                'link'    => 'https://pdki-indonesia.dgip.go.id:/link/5330303230323131313339307c706174656e74'
+            ],
+            [
+                'year'    => 2022, 
+                'title'   => 'Decision Support System for Medium-Term Early Season Assessment for the Indonesian Region (KAMAJAYA)', 
+                'authors' => 'Candra Nur Ihsan, Haries Satyawardhana, Muh. Hafizh Izzaturrahim, Gammamerdianti, Eka Putri Wulandari', 
+                'venue'   => 'Copyright — No. EC00202238348', 
+                'link'    => 'https://pdki-indonesia.dgip.go.id:/link/454330303230323233383334387c636f70797269676874'
+            ],
+            [
+                'year'    => 2022, 
+                'title'   => 'Automated System for Downloading and Processing Atmospheric and Ocean Data from Open Sources (MATSWAPATI)', 
+                'authors' => 'Rahaden Bagas Hatmaja, Suaydhi', 
+                'venue'   => 'Copyright (Computer Program) — No. EC00202238353', 
+                'link'    => 'https://pdki-indonesia.dgip.go.id:/link/454330303230323233383335337c636f70797269676874'
+            ],
+            [
+                'year'    => 2021, 
+                'title'   => 'Maritime Forecasting System Based on Observation and Model Prediction (SEMAR)', 
+                'authors' => 'Candra Nur Ihsan, Suaydhi, Didi Satiadi	', 
+                'venue'   => 'Copyright — No. EC00202156601', 
+                'link'    => 'https://pdki-indonesia.dgip.go.id:/link/454330303230323135363630317c636f70797269676874'
+            ]
         ],
     ],
 ];
