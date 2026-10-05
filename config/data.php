@@ -285,6 +285,7 @@ $news_events = [
         'date_end'    => '2026-09-25',
         'time'        => null,
         'location'    => 'BRIN Samaun Samadikun, Bandung, Indonesia',
+        'speaker'     => 'Mamoru Yamamoto, Hiroyuki Hasighuchi, Asif Awaludin, Nurjanna Joko Trilaksono, Hubert Luce, Noersomadi, Erma Yulihastin, Atsuki Shinbori, Shigeo Yoden, Marzuki, Yasukuni Shibata, Prayitno Abadi, Ajith K. Kuriakose, Albertus Sulaiman, Chun Yen Huang, Tatsuhiro Yokoyama',
         'description' => 'An international training program on atmospheric radar and tropical hydrometeorology, celebrating the 25th Anniversary of the Equatorial Atmosphere Radar (EAR). Organized by BRIN, RISH Kyoto University, and partners.',
         'image'       => 'earth-school.jpeg',
         'link'        => null,
