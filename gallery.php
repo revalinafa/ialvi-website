@@ -15,8 +15,7 @@ include 'includes/header.php';
   <div class="container">
     <div class="hero__eyebrow">National Research and Innovation Agency (BRIN)</div>
     <h1>Gallery</h1>
-    <p>A visual archive of our fieldwork, facilities, meetings, and team
-       moments &mdash; from ocean buoys to server rooms.</p>
+    <p>A visual journey of our research in action &mdash; from field observations and high-performance computing to strategic collaborations and climate education.</p>
   </div>
 </section>
 

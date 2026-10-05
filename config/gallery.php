@@ -19,13 +19,7 @@ $gallery_items = [
         'coord'      => 'CNN Indonesia',
         'caption'    => 'Beware of Super El Niño, Expert: August Expected to Reach Peak Temperatures'
     ],
-    [
-        'type'       => 'youtube',
-        'youtube_id' => 'FM6QqQUG--k',
-        'tag'        => 'Talkshow',
-        'coord'      => 'Jimmy Oentoro Channel',
-        'caption'    => 'Extreme Weather and Early Morning Rain: A Sign of Climate Crisis in Indonesia?'
-    ],
+
     [
         'type'       => 'youtube',
         'youtube_id' => 'FHPjFpW_jgw',
@@ -64,7 +58,7 @@ $gallery_items = [
         [
         'type'    => 'image',
         'image'   => 'Djunjunan Data Center.jpg',
-        'tag'     => 'Facility',
+        'tag'     => 'Infrastructure',
         'coord'   => 'Bandung, West Java',
         'caption' => 'Djunjunan Data Center - HPC Mahameru'
     ],
@@ -85,14 +79,14 @@ $gallery_items = [
     [
         'type'    => 'image',
         'image'   => 'Kelompok Usaha Garam Bajulmati.jpg',
-        'tag'     => 'Field Visit',
+        'tag'     => 'Field Work',
         'coord'   => 'Malang, East Java',
         'caption' => 'Visit to Bajulmati Salt Business Group'
     ],
     [
         'type'    => 'image',
         'image'   => 'Kelompok Usaha Garam Bajulmati-2.jpg',
-        'tag'     => 'Field Visit',
+        'tag'     => 'Field Work',
         'coord'   => 'Malang, East Java',
         'caption' => 'Observation of the Salt Production Process'
     ],
@@ -170,7 +164,7 @@ $gallery_items = [
     [
         'type'    => 'image',
         'image'   => 'Screenshot 2026-09-11 140250.png',
-        'tag'     => 'Facility',
+        'tag'     => 'Collaboration',
         'coord'   => 'Fudan University',
         'caption' => 'Server Room Facility at Fudan University'
     ],
@@ -197,10 +191,24 @@ $gallery_items = [
     ],
     [
         'type'    => 'image',
-        'image'   => 'gapki-meeting.jpg', // Sesuaikan nama file gambar Anda
+        'image'   => 'gapki-meeting.jpg',
         'tag'     => 'Collaboration',
         'coord'   => 'Meeting',
         'caption' => 'Meeting with the Indonesian Palm Oil Association (GAPKI)'
+    ],
+    [
+        'type'    => 'image',
+        'image'   => 'gapki-fgd-presentation.jpg', 
+        'tag'     => 'Collaboration',
+        'coord'   => 'FGD Session',
+        'caption' => 'Prof. Erma Yulihastin presenting at the Focus Group Discussion (FGD) with GAPKI'
+    ],
+    [
+        'type'    => 'image',
+        'image'   => 'gapki-group-photo.jpg', 
+        'tag'     => 'Collaboration',
+        'coord'   => 'Group Photo',
+        'caption' => 'Group photo with representatives of the Indonesian Palm Oil Association (GAPKI)'
     ],
     [
         'type'    => 'image',
@@ -233,14 +241,21 @@ $gallery_items = [
     [
         'type'    => 'image',
         'image'   => 'aws-ewindo-pandeglang.jpg',
-        'tag'     => 'Fieldwork',
+        'tag'     => 'Field Work',
+        'coord'   => 'Pandeglang, Banten',
+        'caption' => 'Instrument Installation: AWS Setup at PT Ewindo'
+    ],
+        [
+        'type'    => 'image',
+        'image'   => 'aws-ewindo-pandeglang2.jpg',
+        'tag'     => 'Field Work',
         'coord'   => 'Pandeglang, Banten',
         'caption' => 'Instrument Installation: AWS Setup at PT Ewindo'
     ],
     [
         'type'    => 'image',
         'image'   => 'menara-pontianak.jpg',
-        'tag'     => 'Fieldwork',
+        'tag'     => 'Field Work',
         'coord'   => 'Pontianak, West Kalimantan',
         'caption' => 'Field Observation at Pontianak Tower'
     ],
@@ -272,6 +287,13 @@ $gallery_items = [
         'coord'   => 'BRIN',
         'caption' => 'Biweekly Seminar and Earth Sciences Bootcamp Documentation'
     ],
+        [
+        'type'    => 'image',
+        'image'   => 'biweekly-esb-doc2.jpg',
+        'tag'     => 'Seminar',
+        'coord'   => 'BRIN',
+        'caption' => 'Biweekly Seminar and Earth Sciences Bootcamp Documentation'
+    ],
     [
         'type'    => 'image',
         'image'   => 'gathering-stakeholder.jpg',
@@ -286,18 +308,52 @@ $gallery_items = [
         'coord'   => 'BRIN',
         'caption' => 'MBKM Research Internship: Final Defense Sessions'
     ],
-    [
+[
         'type'    => 'image',
-        'image'   => 'teaching-universities.jpg',
+        'image'   => 'teaching-sains-kebumian-itb.jpg',
         'tag'     => 'Education',
-        'coord'   => 'University Visit',
-        'caption' => 'Teaching and Supervising in Universities'
+        'coord'   => 'ITB Bandung',
+        'caption' => 'Teaching and Supervising at the Earth Sciences Study Program, Institut Teknologi Bandung (ITB)'
+    ],
+[
+        'type'    => 'image',
+        'image'   => 'zmt-guest-speaker.jpg', 
+        'tag'     => 'Collaboration',
+        'coord'   => 'ZMT Bremen, Germany',
+        'caption' => 'Guest Speaker at the Leibniz Centre for Tropical Marine Research (ZMT)'
     ],
     [
         'type'    => 'image',
+        'image'   => 'zmt-session-photo.jpg', 
+        'tag'     => 'Collaboration',
+        'coord'   => 'ZMT Bremen, Germany',
+        'caption' => 'Session Photo at the Leibniz Centre for Tropical Marine Research (ZMT)'
+    ],
+    ['type'       => 'image',
         'image'   => 'zmt-germany.jpg',
         'tag'     => 'Collaboration',
         'coord'   => 'ZMT Germany',
         'caption' => 'Collaboration with Leibniz Centre for Tropical Marine Research (ZMT)'
-    ]
+    ],
+    [
+        'type'    => 'image',
+        'image'   => 'interview-tv-india.jpg', 
+        'tag'     => 'Media',
+        'coord'   => 'TV Interview',
+        'caption' => 'Prof. Erma Yulihastin during an interview session with an Indian TV network'
+    ],
+    [
+        'type'    => 'image',
+        'image'   => 'mitigasi-sd-gampang-sejati-presentasi.jpg', 
+        'tag'     => 'Education',
+        'coord'   => 'Lamongan, East Java',
+        'caption' => 'Disaster Mitigation and Climate Care Class Presentation at SD Gampang Sejati, Lamongan'
+    ],
+    [
+        'type'    => 'image',
+        'image'   => 'mitigasi-sd-gampang-sejati-guru.jpg', 
+        'tag'     => 'Education',
+        'coord'   => 'Lamongan, East Java',
+        'caption' => 'Group Photo with Teachers during the Disaster Mitigation and Climate Care Class at SD Gampang Sejati'
+    ],
 ];
