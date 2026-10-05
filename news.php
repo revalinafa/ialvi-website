@@ -5,25 +5,33 @@ $page_title  = 'News & Event';
 $active_page = 'news';
 include 'includes/header.php';
 
-$today    = strtotime('today');
-$is_past  = fn($e) => strtotime($e['date_end'] ?? $e['date']) < $today;
+$today   = strtotime('today');
+$is_past = fn($e) => strtotime($e['date_end'] ?? $e['date']) < $today;
 
-$past = array_filter($news_events, $is_past);
-$upcoming_all = array_filter($news_events, fn($e) => !$is_past($e));
+// Daftar slug acara yang dikecualikan dari Card/Tampilan Lama
+$exclude_from_cards = ['fgd-kamajaya-mio', 'meeting-pt-klk'];
 
-// Events Schedule: entri yang punya speaker/software (seri bootcamp) -> tabel.
+// Filter event untuk tampilan lama
+$past         = array_filter($news_events, fn($e) => $is_past($e) && !in_array($e['slug'], $exclude_from_cards));
+$upcoming_all = array_filter($news_events, fn($e) => !$is_past($e) && !in_array($e['slug'], $exclude_from_cards));
+
+// Events Schedule (seri bootcamp dengan speaker/software) -> tabel lama
 $upcoming_schedule = array_filter($upcoming_all, fn($e) => !empty($e['speaker']) || !empty($e['software']));
 
-// Upcoming Events: entri lain (seminar/training/conference besar dengan poster) -> grid.
+// Upcoming Events (tanpa speaker/software) -> grid card
 $upcoming_events = array_filter($upcoming_all, fn($e) => empty($e['speaker']) && empty($e['software']));
 
+// Sorting tampilan lama
 usort($upcoming_schedule, fn($a, $b) => strtotime($a['date']) <=> strtotime($b['date']));
 usort($upcoming_events,   fn($a, $b) => strtotime($a['date']) <=> strtotime($b['date']));
 usort($past,              fn($a, $b) => strtotime($b['date']) <=> strtotime($a['date']));
 
+// Data untuk tabel overview bawah (SEMUA event digabung)
+$all_events = $news_events;
+usort($all_events, fn($a, $b) => strtotime($a['date']) <=> strtotime($b['date']));
+
 /**
- * UPCOMING — tampilan tabel matriks (Tanggal | Tipe | Tema | Pembicara |
- * Software | Waktu & Lokasi). Tidak bergantung pada poster.
+ * TAMPILAN LAMA: UPCOMING — tampilan tabel matriks
  */
 function render_agenda_row($event) {
     $start = strtotime($event['date']);
@@ -37,7 +45,6 @@ function render_agenda_row($event) {
       <td><span class="news-card__type"><?php echo htmlspecialchars(ucfirst($event['type'])); ?></span></td>
       <td>
         <span class="agenda-table__title"><?php echo htmlspecialchars($event['title']); ?></span>
-
       </td>
       <td><?php echo !empty($event['speaker'])  ? htmlspecialchars($event['speaker'])  : '&ndash;'; ?></td>
       <td><?php echo !empty($event['software']) ? htmlspecialchars($event['software']) : '&ndash;'; ?></td>
@@ -50,8 +57,7 @@ function render_agenda_row($event) {
 }
 
 /**
- * PAST — grid poster/dokumentasi. Jika poster belum ada, thumbnail
- * di-skip agar tidak muncul kotak abu-abu kosong.
+ * TAMPILAN LAMA: PAST/UPCOMING — grid poster/dokumentasi
  */
 function render_news_card($event) {
     $start = strtotime($event['date']);
@@ -83,9 +89,50 @@ function render_news_card($event) {
     </article>
     <?php
 }
+
+/**
+ * TAMPILAN BARU: Tabel Overview Bawah (All Events Overview)
+ */
+function render_matrix_row($event) {
+    $start = strtotime($event['date']);
+    $end   = !empty($event['date_end']) ? strtotime($event['date_end']) : null;
+    
+    // Format tanggal tunggal (01.09.2026) atau rentang (21–25.09.2026)
+    if ($end) {
+        $date_display = date('d', $start) . '&ndash;' . date('d.m.Y', $end);
+    } else {
+        $date_display = date('d.m.Y', $start);
+    }
+    ?>
+    <tr>
+      <td class="agenda-table__date"><?php echo $date_display; ?></td>
+      <td>
+        <?php if (!empty($event['link'])): ?>
+          <a href="<?php echo htmlspecialchars($event['link']); ?>">
+            <span class="agenda-table__title"><?php echo htmlspecialchars($event['title']); ?></span>
+          </a>
+        <?php else: ?>
+          <span class="agenda-table__title"><?php echo htmlspecialchars($event['title']); ?></span>
+        <?php endif; ?>
+      </td>
+      <td>
+        <?php echo (!empty($event['speaker']) && $event['speaker'] !== '-') ? htmlspecialchars($event['speaker']) : '&ndash;'; ?>
+      </td>
+      <td>
+        <span class="news-card__type"><?php echo htmlspecialchars(ucfirst($event['type'])); ?></span>
+      </td>
+      <td class="agenda-table__meta">
+        <?php echo !empty($event['time']) ? htmlspecialchars(str_replace(' WIB', '', $event['time'])) : 'tba'; ?>
+      </td>
+      <td>
+        <span class="agenda-table__location"><?php echo htmlspecialchars($event['location']); ?></span>
+      </td>
+    </tr>
+    <?php
+}
 ?>
 
-<section class="hero" style="padding: 48px 0 32px;">
+<section class="hero">
   <div class="container">
     <div class="hero__eyebrow">Updates</div>
     <h1>News &amp; Events</h1>
@@ -97,19 +144,12 @@ function render_news_card($event) {
 <section class="section">
   <div class="container">
 
+    <!-- TAMPILAN LAMA: Agenda / Schedule -->
     <?php if (!empty($upcoming_schedule)): ?>
       <div class="event-group">
         <h2 class="event-group__title">Events Schedule</h2>
         <div class="agenda-table__wrap">
           <table class="agenda-table">
-            <colgroup>
-              <col style="width: 11%;">
-              <col style="width: 14%;">
-              <col style="width: 26%;">
-              <col style="width: 15%;">
-              <col style="width: 11%;">
-              <col style="width: 23%;">
-            </colgroup>
             <thead>
               <tr>
                 <th>Date</th>
@@ -128,6 +168,7 @@ function render_news_card($event) {
       </div>
     <?php endif; ?>
 
+    <!-- TAMPILAN LAMA: Grid Cards (Upcoming) -->
     <?php if (!empty($upcoming_events)): ?>
       <div class="event-group">
         <h2 class="event-group__title">Upcoming Events</h2>
@@ -137,11 +178,41 @@ function render_news_card($event) {
       </div>
     <?php endif; ?>
 
+    <!-- TAMPILAN LAMA: Grid Cards (Past) -->
     <?php if (!empty($past)): ?>
       <div class="event-group">
-        <h2 class="event-group__title"> Past Events</h2>
+        <h2 class="event-group__title">Past Events</h2>
         <div class="news__grid">
           <?php foreach ($past as $event): render_news_card($event); endforeach; ?>
+        </div>
+      </div>
+    <?php endif; ?>
+
+    <!-- TAMPILAN BARU: All Events Overview -->
+    <?php if (!empty($all_events)): ?>
+      <div class="event-group">
+        <h2 class="event-group__title">All Events Overview</h2>
+        
+        <div class="agenda-table__wrap">
+          <table class="agenda-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Event Name</th>
+                <th>Speakers</th>
+                <th>Event Type</th>
+                <th>Time</th>
+                <th>Event Place</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php 
+                foreach ($all_events as $event) {
+                    render_matrix_row($event); 
+                }
+              ?>
+            </tbody>
+          </table>
         </div>
       </div>
     <?php endif; ?>

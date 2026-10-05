@@ -19,7 +19,6 @@ $nav_items = [
         'label'    => 'Publication',
         'href'     => 'publication.php',
         'children' => [
-            'patent'      => ['label' => 'Patent',      'href' => 'patent.php'],
             'stakeholder' => ['label' => 'Stakeholder', 'href' => 'stakeholder.php'],
         ],
     ],

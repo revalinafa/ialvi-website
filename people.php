@@ -58,7 +58,30 @@ include 'includes/header.php';
   </div>
 </section>
 
+<?php if (!empty($collaborators)): ?>
 <section class="section section--muted">
+  <div class="container">
+    <div class="section__head">
+      <h2>Collaborators</h2>
+      <p>Researchers and partners from other institutions who have collaborated
+         with IALVI / ASICLIVAR.</p>
+    </div>
+
+    <ul class="collaborator-list">
+      <?php foreach ($collaborators as $collab): ?>
+        <li class="collaborator-list__item">
+          <span class="collaborator-list__name"><?php echo htmlspecialchars($collab['name']); ?></span>
+          <?php if (!empty($collab['affiliation'])): ?>
+            <span class="collaborator-list__affiliation"><?php echo htmlspecialchars($collab['affiliation']); ?></span>
+          <?php endif; ?>
+        </li>
+      <?php endforeach; ?>
+    </ul>
+  </div>
+</section>
+<?php endif; ?>
+
+<section class="section">
   <div class="container">
     <div class="section__head">
       <h2>Program &amp; Kesempatan Kolaborasi</h2>

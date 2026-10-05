@@ -1838,4 +1838,96 @@ img {
     max-width: 280px;
   }
 }
+
+/* ---------- COLLABORATORS LIST (people.php) ---------- */
+.collaborator-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: var(--foam);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.collaborator-list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.collaborator-list__item:last-child {
+  border-bottom: none;
+}
+
+.collaborator-list__item:hover {
+  background: var(--mist);
+}
+
+.collaborator-list__name {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.collaborator-list__affiliation {
+  color: var(--slate);
+  font-size: 0.9rem;
+}
  
+/* ==========================================================================
+   UPDATED TABLE & EVENT STYLES (Penanganan Lebar Kolom via CSS)
+   ========================================================================== */
+
+/* Memastikan tabel memakai layout tetap agar persentase width dipatuhi */
+.agenda-table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+/* Pengaturan Lebar Kolom Tabel (Menggantikan atribut width di HTML) */
+.agenda-table th:nth-child(1),
+.agenda-table td:nth-child(1) { 
+  width: 11%; 
+  white-space: nowrap;
+}
+
+.agenda-table th:nth-child(2),
+.agenda-table td:nth-child(2) { 
+  width: 25%; 
+  word-wrap: break-word;
+}
+
+.agenda-table th:nth-child(3),
+.agenda-table td:nth-child(3) { 
+  width: 20%; 
+}
+
+.agenda-table th:nth-child(4),
+.agenda-table td:nth-child(4) { 
+  width: 14%; 
+}
+
+.agenda-table th:nth-child(5),
+.agenda-table td:nth-child(5) { 
+  width: 10%; 
+  white-space: nowrap;
+}
+
+.agenda-table th:nth-child(6),
+.agenda-table td:nth-child(6) { 
+  width: 20%; 
+}
+
+/* Hover state untuk baris tabel */
+.agenda-table tbody tr:hover {
+  background-color: var(--mist, rgba(234, 242, 248, 0.5));
+}
+
+/* Jarak antar kelompok event */
+.event-group + .event-group {
+  margin-top: 48px;
+}
