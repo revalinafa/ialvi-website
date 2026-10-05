@@ -64,7 +64,7 @@ include 'includes/header.php';
     <div class="section__head">
       <h2>Collaborators</h2>
       <p>Researchers and partners from other institutions who have collaborated
-         with IALVI / ASICLIVAR.</p>
+         with ASICLIVAR</p>
     </div>
 
     <ul class="collaborator-list">

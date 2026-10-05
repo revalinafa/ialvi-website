@@ -275,13 +275,6 @@ $gallery_items = [
     ],
     [
         'type'    => 'image',
-        'image'   => 'earth-school.jpg',
-        'tag'     => 'Education',
-        'coord'   => 'Earth School',
-        'caption' => 'Earth School Program Activities'
-    ],
-    [
-        'type'    => 'image',
         'image'   => 'biweekly-esb-doc.jpg',
         'tag'     => 'Seminar',
         'coord'   => 'BRIN',
@@ -300,13 +293,6 @@ $gallery_items = [
         'tag'     => 'Event',
         'coord'   => 'Gathering',
         'caption' => 'Gathering and Building Connections with Stakeholders'
-    ],
-    [
-        'type'    => 'image',
-        'image'   => 'mbkm-defense.jpg',
-        'tag'     => 'Education',
-        'coord'   => 'BRIN',
-        'caption' => 'MBKM Research Internship: Final Defense Sessions'
     ],
 [
         'type'    => 'image',
@@ -355,5 +341,54 @@ $gallery_items = [
         'tag'     => 'Education',
         'coord'   => 'Lamongan, East Java',
         'caption' => 'Group Photo with Teachers during the Disaster Mitigation and Climate Care Class at SD Gampang Sejati'
+    ],
+    [
+        'type'    => 'image',
+        'image'   => 'workshop-pertamina-surabaya-1.jpeg',
+        'tag'     => 'Collaboration',
+        'coord'   => 'Surabaya, East Java',
+        'caption' => 'Workshop with PERTAMINA: Natural Disaster Emergency Preparedness Assessment and HSSE Evaluation'
+    ],
+        [
+        'type'    => 'image',
+        'image'   => 'workshop-pertamina-surabaya-2.jpeg',
+        'tag'     => 'Collaboration',
+        'coord'   => 'Surabaya, East Java',
+        'caption' => 'Workshop with PERTAMINA: Natural Disaster Emergency Preparedness Assessment and HSSE Evaluation'
+    ],
+    [
+        'type'    => 'image',
+        'image'   => 'brin-computational-lab-1.jpg',
+        'tag'     => 'Infrastructure',
+        'coord'   => 'BRIN Bandung',
+        'caption' => 'Research and Data Processing Activities at the BRIN Computational Laboratory'
+    ],
+        [
+        'type'    => 'image',
+        'image'   => 'brin-computational-lab-2.jpg',
+        'tag'     => 'Infrastructure',
+        'coord'   => 'BRIN Bandung',
+        'caption' => 'Research and Data Processing Activities at the BRIN Computational Laboratory'
+    ],
+    [
+        'type'    => 'image',
+        'image'   => 'itb-thesis-defense.jpg',
+        'tag'     => 'Education',
+        'coord'   => 'ITB Bandung',
+        'caption' => 'Master\'s Thesis Defense Session at the Physics Study Program, Institut Teknologi Bandung (ITB)'
+    ],
+    [
+        'type'    => 'image',
+        'image'   => 'earth-school-session-1.jpg',
+        'tag'     => 'Education',
+        'coord'   => 'Earth School',
+        'caption' => 'Earth School Program Photo Session'
+    ],
+    [
+        'type'    => 'image',
+        'image'   => 'earth-school-session-2.jpg',
+        'tag'     => 'Education',
+        'coord'   => 'Earth School',
+        'caption' => 'Educational Activities and Engagement during the Earth School Program'
     ],
 ];
