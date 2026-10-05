@@ -5,8 +5,19 @@ require_once 'config/gallery.php';
 $page_title  = 'Home';
 $active_page = 'home';
 
-$hero_slider_images = array_values(array_filter($gallery_items, fn($item) => $item['type'] === 'image'));
-$hero_slider_images = array_slice($hero_slider_images, 0, 5); // limit to 5 slidess
+// Tentukan 5 foto spesifik yang akan ditampilkan di slider beranda
+$highlight_photos = [
+    'gapki-meeting.jpg',
+    'zmt-session-photo.jpg',
+    'WhatsApp Image 2026-09-15 at 14.26.13.jpeg',
+    'aws-ewindo-pandeglang.jpg',
+    'Diskusi di Djunjunan Data Center.jpg'
+];
+
+// Ambil data dari galeri yang nama gambarnya sesuai dengan daftar di atas
+$hero_slider_images = array_values(array_filter($gallery_items, function($item) use ($highlight_photos) {
+    return $item['type'] === 'image' && in_array($item['image'], $highlight_photos);
+}));
 // ----------------------------------------------------------------------
 // Fetch the 3 most recent publications (across ALL categories) for the
 // "Climate Interaction & Featured Publications" story block.
