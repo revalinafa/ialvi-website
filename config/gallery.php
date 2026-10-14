@@ -8,7 +8,7 @@ $gallery_items = [
     [
         'type'       => 'youtube',
         'youtube_id' => '3jzotGvY9-g',
-        'tag'        => 'Documentary',
+        'tag'        => 'Media',
         'coord'      => 'CNA Insider',
         'caption'    => 'A \'Super\' El Niño Is Coming For Southeast Asia. What Happens Next? | Insight'
     ],
@@ -30,14 +30,14 @@ $gallery_items = [
     [
         'type'       => 'youtube',
         'youtube_id' => 'FM6QqQUG--k',
-        'tag'        => 'Talkshow',
+        'tag'        => 'Media',
         'coord'      => 'Jimmy Oentoro Channel',
         'caption'    => 'Extreme Weather and Early Morning Rain: A Sign of Climate Crisis in Indonesia?'
     ],
     [
         'type'       => 'youtube',
         'youtube_id' => 'E7KDBaM58RA',
-        'tag'        => 'Biography',
+        'tag'        => 'Profile',
         'coord'      => 'BRIN',
         'caption'    => 'Research Professor Biography: Dr. Erma Yulihastin'
     ],
@@ -65,7 +65,7 @@ $gallery_items = [
     [
         'type'    => 'image',
         'image'   => 'Diskusi di Djunjunan Data Center.jpg',
-        'tag'     => 'Meeting',
+        'tag'     => 'Collaboration',
         'coord'   => 'Bandung, West Java',
         'caption' => 'Discussion Session at Djunjunan Data Center'
     ],
@@ -150,14 +150,14 @@ $gallery_items = [
     [
         'type'    => 'image',
         'image'   => 'Rapat antisipasi musim kemarau 2023 Serang Banten.jpg',
-        'tag'     => 'Meeting',
+        'tag'     => 'Collaboration',
         'coord'   => 'Serang, Banten',
         'caption' => 'Coordination Meeting on Dry Season and Weak El Nino'
     ],
     [
         'type'    => 'image',
         'image'   => 'Rapat antisipasi musim kemarau 2023 Serang Banten-2.jpg',
-        'tag'     => 'Meeting',
+        'tag'     => 'Collaboration',
         'coord'   => 'Serang, Banten',
         'caption' => 'Dry Season Anticipation Strategy Meeting'
     ],
@@ -210,33 +210,54 @@ $gallery_items = [
         'coord'   => 'Group Photo',
         'caption' => 'Group photo with representatives of the Indonesian Palm Oil Association (GAPKI)'
     ],
+    // [
+    //     'type'    => 'image',
+    //     'image'   => 'sign-collaboration.jpg',
+    //     'tag'     => 'Collaboration',
+    //     'coord'   => 'SIGN System',
+    //     'caption' => 'Collaboration with SIGN Ocean-Fisheries-Coastal Prediction Systems'
+    // ],
+    // [
+    //     'type'    => 'image',
+    //     'image'   => 'kkp-meeting.jpg',
+    //     'tag'     => 'Government',
+    //     'coord'   => 'Ministry of Marine Affairs',
+    //     'caption' => 'Coordination with the Ministry of Marine Affairs and Fisheries (KKP)'
+    // ],
+    // [
+    //     'type'    => 'image',
+    //     'image'   => 'bnpb-meeting.jpg',
+    //     'tag'     => 'Government',
+    //     'coord'   => 'BNPB',
+    //     'caption' => 'Discussion with the National Disaster Management Agency (BNPB)'
+    // ],
+    // [
+    //     'type'    => 'image',
+    //     'image'   => 'bpbd-meeting.jpg',
+    //     'tag'     => 'Government',
+    //     'coord'   => 'BPBD',
+    //     'caption' => 'Synergy with the Regional Disaster Management Agency (BPBD)'
+    // ],
     [
         'type'    => 'image',
-        'image'   => 'sign-collaboration.jpg',
-        'tag'     => 'Collaboration',
-        'coord'   => 'SIGN System',
-        'caption' => 'Collaboration with SIGN Ocean-Fisheries-Coastal Prediction Systems'
+        'image'   => 'pemasangan balon.png', 
+        'tag'     => 'Field Work',
+        'coord'   => 'Atmospheric Observation',
+        'caption' => 'Weather balloon (radiosonde) launch preparation for upper-air atmospheric observation'
     ],
     [
         'type'    => 'image',
-        'image'   => 'kkp-meeting.jpg',
-        'tag'     => 'Government',
-        'coord'   => 'Ministry of Marine Affairs',
-        'caption' => 'Coordination with the Ministry of Marine Affairs and Fisheries (KKP)'
+        'image'   => 'asiclivar-team (1).jpeg', 
+        'tag'     => 'Profile',
+        'coord'   => 'Group Photo',
+        'caption' => 'ASICLIVAR (IALVI) Research Group Team Members and Research Assistants'
     ],
-    [
+        [
         'type'    => 'image',
-        'image'   => 'bnpb-meeting.jpg',
-        'tag'     => 'Government',
-        'coord'   => 'BNPB',
-        'caption' => 'Discussion with the National Disaster Management Agency (BNPB)'
-    ],
-    [
-        'type'    => 'image',
-        'image'   => 'bpbd-meeting.jpg',
-        'tag'     => 'Government',
-        'coord'   => 'BPBD',
-        'caption' => 'Synergy with the Regional Disaster Management Agency (BPBD)'
+        'image'   => 'asiclivar-team (2).jpeg', 
+        'tag'     => 'Profile',
+        'coord'   => 'Group Photo',
+        'caption' => 'ASICLIVAR (IALVI) Research Group Team Members and Research Assistants'
     ],
     [
         'type'    => 'image',
@@ -259,20 +280,20 @@ $gallery_items = [
         'coord'   => 'Pontianak, West Kalimantan',
         'caption' => 'Field Observation at Pontianak Tower'
     ],
-    [
-        'type'    => 'image',
-        'image'   => 'pt-mts-sumatra.jpg',
-        'tag'     => 'Collaboration',
-        'coord'   => 'Sumatra',
-        'caption' => 'Strategic Meeting with PT Mitra Tanam Sejahtera (MTS)'
-    ],
-    [
-        'type'    => 'image',
-        'image'   => 'mou-pt-pks.jpg',
-        'tag'     => 'Collaboration',
-        'coord'   => 'MoU Signing',
-        'caption' => 'Memorandum of Understanding Signing Session with Palm Oil Mill Partners'
-    ],
+    // [
+    //     'type'    => 'image',
+    //     'image'   => 'pt-mts-sumatra.jpg',
+    //     'tag'     => 'Collaboration',
+    //     'coord'   => 'Sumatra',
+    //     'caption' => 'Strategic Meeting with PT Mitra Tanam Sejahtera (MTS)'
+    // ],
+    // [
+    //     'type'    => 'image',
+    //     'image'   => 'mou-pt-pks.jpg',
+    //     'tag'     => 'Collaboration',
+    //     'coord'   => 'MoU Signing',
+    //     'caption' => 'Memorandum of Understanding Signing Session with Palm Oil Mill Partners'
+    // ],
     [
         'type'    => 'image',
         'image'   => 'biweekly-esb-doc.jpg',
@@ -290,7 +311,7 @@ $gallery_items = [
     [
         'type'    => 'image',
         'image'   => 'gathering-stakeholder.jpg',
-        'tag'     => 'Event',
+        'tag'     => 'Collaboration',
         'coord'   => 'Gathering',
         'caption' => 'Gathering and Building Connections with Stakeholders'
     ],
