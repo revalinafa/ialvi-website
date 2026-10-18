@@ -42,7 +42,7 @@ $people = [
         'role'        => 'Senior Researcher (Head of Research on Oceanology)',
         'category'    => 'senior_researcher',
         'degree_note' => null,
-        'photo'       => 'furqon-azis-ismail.png',
+        'photo'       => 'Furqon-Azis-Ismail.png',
         'url'         => 'https://www.linkedin.com/in/furqon-azis-ismail-a1a02736/',
     ],
     [
