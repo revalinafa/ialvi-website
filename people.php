@@ -70,7 +70,13 @@ include 'includes/header.php';
     <ul class="collaborator-list">
       <?php foreach ($collaborators as $collab): ?>
         <li class="collaborator-list__item">
-          <span class="collaborator-list__name"><?php echo htmlspecialchars($collab['name']); ?></span>
+          <span class="collaborator-list__name">
+            <?php if (!empty($collab['url'])): ?>
+              <a href="<?php echo htmlspecialchars($collab['url']); ?>" target="_blank" rel="noopener"><?php echo htmlspecialchars($collab['name']); ?></a>
+            <?php else: ?>
+              <?php echo htmlspecialchars($collab['name']); ?>
+            <?php endif; ?>
+          </span>
           <?php if (!empty($collab['affiliation'])): ?>
             <span class="collaborator-list__affiliation"><?php echo htmlspecialchars($collab['affiliation']); ?></span>
           <?php endif; ?>

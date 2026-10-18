@@ -1877,6 +1877,16 @@ img {
   color: var(--slate);
   font-size: 0.9rem;
 }
+
+.collaborator-list__name a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.collaborator-list__name a:hover {
+  color: var(--sea-blue);
+  text-decoration: underline;
+}
  
 /* ==========================================================================
    UPDATED TABLE & EVENT STYLES (Penanganan Lebar Kolom via CSS)
