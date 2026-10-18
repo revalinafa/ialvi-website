@@ -32,6 +32,7 @@ $people = [
         'category'    => 'chief_scientist',
         'degree_note' => 'Professor Researcher',
         'photo'       => 'erma-yulihastin.png',
+        'url'         => 'https://www.linkedin.com/in/prof-dr-erma-yulihastin-a2334038/',
     ],
 
     // --- Senior Researchers ---
@@ -42,6 +43,7 @@ $people = [
         'category'    => 'senior_researcher',
         'degree_note' => null,
         'photo'       => 'furqon-azis-ismail.png',
+        'url'         => 'https://www.linkedin.com/in/furqon-azis-ismail-a1a02736/',
     ],
     [
         'slug'        => 'abdul-basit',
@@ -50,6 +52,7 @@ $people = [
         'category'    => 'senior_researcher',
         'degree_note' => null,
         'photo'       => 'abdul-basit.png',
+        'url'         => 'https://scholar.google.com/citations?user=hJ7pWKsAAAAJ&hl=en',
     ],
     [
         'slug'        => 'fiolenta-marpaung',
@@ -58,6 +61,7 @@ $people = [
         'category'    => 'senior_researcher',
         'degree_note' => null,
         'photo'       => 'fiolenta-marpaung.png',
+        'url'         => 'https://www.linkedin.com/in/fiolentamarpaung/',
     ],
     [
         'slug'        => 'suaydhi',
@@ -66,6 +70,7 @@ $people = [
         'category'    => 'senior_researcher',
         'degree_note' => 'Doctoral Student (PhD, Australia)',
         'photo'       => 'suaydhi.png',
+        'url'         => 'https://www.linkedin.com/in/suay-suaydhi-b79b6926/',
     ],
 
     // --- Junior Researchers ---
@@ -76,6 +81,7 @@ $people = [
         'category'    => 'junior_researcher',
         'degree_note' => null,
         'photo'       => 'eka-putri-wulandari.png',
+        'url'         => 'https://scholar.google.com/citations?hl=en&user=XghVo9wAAAAJ',
     ],
     [
         'slug'        => 'rahaden-bagas-hatmaja',
@@ -84,6 +90,7 @@ $people = [
         'category'    => 'junior_researcher',
         'degree_note' => 'Doctoral Student (PhD, USA)',
         'photo'       => 'rahaden-bagas-hatmaja.png',
+        'url'         => 'https://www.linkedin.com/in/rbhatmaja/',
     ],
     [
         'slug'        => 'amalia-nurlatifah',
@@ -92,6 +99,7 @@ $people = [
         'category'    => 'junior_researcher',
         'degree_note' => 'Doctoral Student (PhD, UK)',
         'photo'       => 'amalia-nurlatifah.png',
+        'url'         => 'https://www.linkedin.com/in/amalialatifah/',
     ],
 
     // --- Postdoctoral and Research Assistants Fellows ---
@@ -102,6 +110,7 @@ $people = [
         'category'    => 'postdoc_ra',
         'degree_note' => null,
         'photo'       => 'erlin-beliyana.png',
+        'url'         => 'https://www.linkedin.com/in/erlin-beliyana-4925571a1/',
     ],
     [
         'slug'        => 'inovasita-alifdini',
@@ -110,6 +119,7 @@ $people = [
         'category'    => 'postdoc_ra',
         'degree_note' => null,
         'photo'       => 'inovasita-alifdini.png',
+        'url'         => 'https://www.linkedin.com/in/inovasita-alifdini-a7264488/',
     ],
     [
         'slug'        => 'amirotul-bahiyah',
@@ -118,6 +128,7 @@ $people = [
         'category'    => 'postdoc_ra',
         'degree_note' => 'Candidate',
         'photo'       => 'amirotul-bahiyah.png',
+        'url'         => 'https://www.linkedin.com/in/amirotul-bahiyah/',
     ],
     [
         'slug'        => 'narizka-nanda-purwadani',
@@ -126,6 +137,7 @@ $people = [
         'category'    => 'postdoc_ra',
         'degree_note' => 'Doctoral Student (PhD, ITB)',
         'photo'       => 'narizka-nanda-purwadani.png',
+        'url'         => 'https://www.linkedin.com/in/narizka-nanda-purwadani/',
     ],
     [
         'slug'        => 'alya-fitri-syalsabilla',
@@ -134,6 +146,7 @@ $people = [
         'category'    => 'postdoc_ra',
         'degree_note' => 'Doctoral Student (PhD in Earth Sciences, ITB)',
         'photo'       => 'alya-fitri-syalsabilla.png',
+        'url'         => 'https://www.linkedin.com/in/alyafitrisyalsabilla/',
     ],
     [
         'slug'        => 'syifa-alifia-azzahra',
@@ -142,6 +155,7 @@ $people = [
         'category'    => 'postdoc_ra',
         'degree_note' => 'Master Student (Physics, ITB)',
         'photo'       => 'syifa-alifia-azzahra.png',
+        'url'         => 'https://www.linkedin.com/in/syifa-alifia-azzahra/',
     ],
     [
         'slug'        => 'afiq-mahasin',
@@ -150,6 +164,7 @@ $people = [
         'category'    => 'postdoc_ra',
         'degree_note' => 'Master Student (Physics, ITB)',
         'photo'       => 'afiq-mahasin.png',
+        'url'         => 'https://www.linkedin.com/in/afiq-mahasin-a78113299/?locale=en',
     ],
     [
         'slug'        => 'sanaullah-zehri',
@@ -158,6 +173,7 @@ $people = [
         'category'    => 'postdoc_ra',
         'degree_note' => 'Master Student (Physics, ITB)',
         'photo'       => 'sanaullah-zehri.png',
+        'url'         => 'https://www.linkedin.com/in/sanaullahzehri/',
     ],
     [
         'slug'        => 'ikbal-nur-dian-triatmojo',
@@ -166,6 +182,7 @@ $people = [
         'category'    => 'postdoc_ra',
         'degree_note' => 'Master Student (Geodesy & Geomatics, ITB)',
         'photo'       => 'ikbal-nur-dian-triatmojo.png',
+        'url'         => 'https://www.linkedin.com/in/ikbal-triatmadja/',
     ],
 
     // --- Degree by Research ---
@@ -176,6 +193,7 @@ $people = [
         'category'    => 'degree_by_research',
         'degree_note' => 'Master Student (Petroleum Engineering, ITB)',
         'photo'       => 'riril-mariadani.png',
+        'url'         => 'https://www.linkedin.com/in/riril-mariadani-948a8265/',
     ],
 
     
@@ -189,7 +207,6 @@ $collaborators = [
     ['name' => 'Prof. Sr. Dr. Mazlan Hashim FASc',    'affiliation' => 'Universiti Teknologi Malaysia', 'url' => 'https://www.linkedin.com/in/mazlan-hashim-2ba58615/'],
     ['name' => 'Dr. Ponselvi A/p Jeevaragagam',           'affiliation' => 'Universiti Teknologi Malaysia', 'url' => 'https://www.linkedin.com/in/ponselvi-jeevaragagam-6065ba40/'],
     ['name' => 'Prof. Madya Ts. Gs. Dr. Mohd Nadzri bin Md Reba',          'affiliation' => 'Universiti Teknologi Malaysia', 'url' => 'https://www.utm.my/directory/staff/nadzri'],
-    ['name' => 'Ivonne Raja',                         'affiliation' => null, 'url' => 'https://www.linkedin.com/in/ivonne-radjawane-3a498732/'],
     ['name' => 'Josephine R. Brown',                     'affiliation' => 'The University of Melbourne', 'url' => 'https://www.linkedin.com/in/josephine-brown-693226329/'],
     ['name' => 'Dr. Claire Vincent',                      'affiliation' => 'The University of Melbourne', 'url' => 'https://findanexpert.unimelb.edu.au/profile/19945-claire-vincent'],
     ['name' => 'Dr. Shigeo Yoden',                        'affiliation' => 'Kyoto University, Japan', 'url' => 'http://www-mete.kugi.kyoto-u.ac.jp/yoden/index_En.html'],
@@ -201,6 +218,7 @@ $collaborators = [
     ['name' => 'Ariane Koch-Larrouy',                 'affiliation' => 'Toulouse University, CNRS, CNES, IRD', 'url' => 'https://www.researchgate.net/profile/Ariane-Koch-Larrouy'],
     ['name' => 'PD Dr. Tim Rixen',                    'affiliation' => 'Leibniz Centre for Tropical Marine Research (ZMT)', 'url' => 'https://www.leibniz-zmt.de/de/tropenforschung/mitarbeiterinnen-mitarbeiter/tim-rixen.html'],
     ['name' => 'Acep Purqon, S.Si., M.Si., Ph.D.',    'affiliation' => 'Institut Teknologi Bandung', 'url' => 'https://www.linkedin.com/in/acep-purqon-737543aa/'],
+    ['name' => 'Ivonne Radjawane',                         'affiliation' => 'Institut Teknologi Bandung', 'url' => 'https://www.linkedin.com/in/ivonne-radjawane-3a498732/'],
     ['name' => 'Prof. Dr. Eng. Nining Sari Ningsih, M.S.',                  'affiliation' => 'Institut Teknologi Bandung', 'url' => 'https://itb.ac.id/staf/profil/nining-sari-ningsih'],
     ['name' => 'Dr. Muhammad Rais Abdillah, S.Si., M.Sc.',                       'affiliation' => 'Institut Teknologi Bandung', 'url' => 'https://itb.ac.id/staf/profil/muhammad-rais-abdillah'],
     ['name' => 'Dr. Joko Sampurno, M.Si.',                       'affiliation' => 'Universitas Tanjungpura', 'url' => 'https://www.researchgate.net/profile/Joko-Sampurno'],
@@ -348,38 +366,20 @@ $contact_info = [
 //    Dikelompokkan berdasarkan kategori mitra.
 // ----------------------------------------------------------------------
 $stakeholder_categories = [
+    'university'        => 'University Partners',
     'industry_current'  => 'Current Partners',
     'industry_former'   => 'Former Partners',
-    'university'        => 'University Partners',
     'government'        => 'Government & Ministry Partners',
 ];
 
 $stakeholders = [
-    // --- Current Partners (industry) ---
-    ['name' => 'PT. EWINDO',     'sector' => 'Climate Modelling for Food Security',    'category' => 'industry_current', 'logo' => 'pt-ewindo.png'],
-    ['name' => 'PT. PLN',        'sector' => 'Weather & Climate Modelling for Operational Safety and Renewable Energy', 'category' => 'industry_current', 'logo' => 'pt-pln.png'],
-    ['name' => 'PT. MHU',        'sector' => 'Weather & Climate Modelling for Operational Safety and Renewable Energy', 'category' => 'industry_current', 'logo' => 'pt-mhu.png'],
-    ['name' => 'PHE Pertamina',  'sector' => 'Ocean-Fisheries-Coastal Prediction Systems', 'category' => 'industry_current', 'logo' => 'pt-phe-pertamina.png'],
-    ['name' => 'SIGN',           'sector' => 'Ocean-Fisheries-Coastal Prediction Systems', 'category' => 'industry_current', 'logo' => 'pt-sign.png'],
-    ['name' => 'DATATEC',        'sector' => 'Weather and Seasonal Prediction Systems for Planning and Safety Transportation', 'category' => 'industry_current', 'logo' => 'pt-datatec.png'],
-    ['name' => 'KAMSELINDO',     'sector' => 'Weather and Seasonal Prediction Systems for Planning and Safety Transportation', 'category' => 'industry_current', 'logo' => 'kamselindo.png'],
-    ['name' => 'PT. Mega Inovasi Organik', 'sector' => 'Climate Smart & Organic Agriculture', 'category' => 'industry_current', 'logo' => 'pt-mio.png'],
-    ['name' => 'PAM JAYA DKI Jakarta', 'sector' => 'Water Resource Management & Hydrometeorology', 'category' => 'industry_current', 'logo' => 'pam-jaya.png'],
-    ['name' => 'KLK OLEO', 'sector' => 'Climate Modelling for Plantation & Agro-industry atau Sustainable Agriculture & Industrial Operations', 'category' => 'industry_current', 'logo' => 'klk-oleo.png'],
-    ['name' => 'PAM JAYA DKI Jakarta', 'sector' => 'Water Resource Management & Hydrometeorology', 'category' => 'industry_current', 'logo' => 'pam-jaya.png'],
-    ['name' => 'Koperasi Sekunder Induk Garam Nasional', 'sector' => 'Weather & Climate Prediction for Salt Production', 'category' => 'industry_current', 'logo' => 'koperasi-garam.png'],
-
-    // --- Former Partners (industry) ---
-    ['name' => 'PT. MTS', 'sector' => 'Climate Smart & Precision Agriculture', 'category' => 'industry_former', 'logo' => 'pt-mts.png'],
-    // --- Government & Ministry Partners ---
-    ['name' => 'BNPB', 'sector' => 'Disaster Early Warning', 'category' => 'government', 'logo' => 'bnpb.png'],
-    ['name' => 'KKP',  'sector' => 'Maritime Productivity',  'category' => 'government', 'logo' => 'kkp.png'],
-    ['name' => 'Dinas Ketahanan Pangan dan Pertanian Kab. Lamongan',  'sector' => 'Climate Smart Agriculture',  'category' => 'government', 'logo' => 'logo-kppl.png'],
-    ['name' => 'Dinas Perikanan dan Kelautan DIY',  'sector' => 'Maritime Productivity & Fisheries atau Ocean-Coastal Management',  'category' => 'government', 'logo' => 'dinkel-yogya.png'],
-    ['name' => 'Kementerian Dalam Negeri',  'sector' => 'Public Policy & Regional Development atau Disaster Mitigation Policy',  'category' => 'government', 'logo' => 'kemendagri.png'],
-    ['name' => 'Bank Indonesia',  'sector' => 'Economic Policy',  'category' => 'government', 'logo' => 'bank-indo.png'],
-
     // --- University Partners ---
+    ['name' => 'Leibniz Centre for Tropical Marine Research (ZMT)',                 'sector' => 'Academic & Research Collaboration', 'category' => 'university', 'logo' => 'ZMT.png'],
+    ['name' => 'The University of Melbourne',                 'sector' => 'Academic & Research Collaboration', 'category' => 'university', 'logo' => 'Melbourne.png'],
+    ['name' => 'Toulouse University',                 'sector' => 'Academic & Research Collaboration', 'category' => 'university', 'logo' => 'toulouse.png'],
+    ['name' => 'Kyoto University',                 'sector' => 'Academic & Research Collaboration', 'category' => 'university', 'logo' => 'kyoto.png'],
+    ['name' => 'Universiti Teknologi Malaysia',                 'sector' => 'Academic & Research Collaboration', 'category' => 'university', 'logo' => 'UTM.png'],
+    ['name' => 'Universiti Malaysia Terengganu',                 'sector' => 'Academic & Research Collaboration', 'category' => 'university', 'logo' => 'UMT.png'],
     ['name' => 'Institut Teknologi Bandung',                 'sector' => 'Academic & Research Collaboration', 'category' => 'university', 'logo' => 'itb.png'],
     ['name' => 'Universitas Padjadjaran',                  'sector' => 'Academic & Research Collaboration', 'category' => 'university', 'logo' => 'unpad.png'],
     ['name' => 'IPB University',                             'sector' => 'Academic & Research Collaboration', 'category' => 'university', 'logo' => 'ipb.png'],
@@ -396,6 +396,30 @@ $stakeholders = [
     ['name' => 'Universitas Jember',                        'sector' => 'Academic & Research Collaboration', 'category' => 'university', 'logo' => 'unej.png'],
     ['name' => 'Universitas Mataram',                      'sector' => 'Academic & Research Collaboration', 'category' => 'university', 'logo' => 'unram.png'],
     ['name' => 'Universitas Pertahanan RI',                'sector' => 'Academic & Research Collaboration', 'category' => 'university', 'logo' => 'unhan.png'],
+
+    // --- Current Partners (industry) ---
+    ['name' => 'PT. EWINDO',     'sector' => 'Climate Modelling for Food Security',    'category' => 'industry_current', 'logo' => 'pt-ewindo.png'],
+    ['name' => 'PT. PLN',        'sector' => 'Weather & Climate Modelling for Operational Safety and Renewable Energy', 'category' => 'industry_current', 'logo' => 'pt-pln.png'],
+    ['name' => 'PT. MHU',        'sector' => 'Weather & Climate Modelling for Operational Safety and Renewable Energy', 'category' => 'industry_current', 'logo' => 'pt-mhu.png'],
+    ['name' => 'PHE Pertamina',  'sector' => 'Ocean-Fisheries-Coastal Prediction Systems', 'category' => 'industry_current', 'logo' => 'pt-phe-pertamina.png'],
+    ['name' => 'SIGN',           'sector' => 'Ocean-Fisheries-Coastal Prediction Systems', 'category' => 'industry_current', 'logo' => 'pt-sign.png'],
+    ['name' => 'DATATEC',        'sector' => 'Weather and Seasonal Prediction Systems for Planning and Safety Transportation', 'category' => 'industry_current', 'logo' => 'pt-datatec.png'],
+    ['name' => 'KAMSELINDO',     'sector' => 'Weather and Seasonal Prediction Systems for Planning and Safety Transportation', 'category' => 'industry_current', 'logo' => 'kamselindo.png'],
+    ['name' => 'PT. Mega Inovasi Organik', 'sector' => 'Climate Smart & Organic Agriculture', 'category' => 'industry_current', 'logo' => 'pt-mio.png'],
+    ['name' => 'PAM JAYA DKI Jakarta', 'sector' => 'Water Resource Management & Hydrometeorology', 'category' => 'industry_current', 'logo' => 'pam-jaya.png'],
+    ['name' => 'KLK OLEO', 'sector' => 'Climate Modelling for Plantation & Agro-industry atau Sustainable Agriculture & Industrial Operations', 'category' => 'industry_current', 'logo' => 'klk-oleo.png'],
+    ['name' => 'Koperasi Sekunder Induk Garam Nasional', 'sector' => 'Weather & Climate Prediction for Salt Production', 'category' => 'industry_current', 'logo' => 'koperasi-garam.png'],
+
+    // --- Former Partners (industry) ---
+    ['name' => 'PT. MTS', 'sector' => 'Climate Smart & Precision Agriculture', 'category' => 'industry_former', 'logo' => 'pt-mts.png'],
+    // --- Government & Ministry Partners ---
+    ['name' => 'BNPB', 'sector' => 'Disaster Early Warning', 'category' => 'government', 'logo' => 'bnpb.png'],
+    ['name' => 'KKP',  'sector' => 'Maritime Productivity',  'category' => 'government', 'logo' => 'kkp.png'],
+    ['name' => 'Dinas Ketahanan Pangan dan Pertanian Kab. Lamongan',  'sector' => 'Climate Smart Agriculture',  'category' => 'government', 'logo' => 'logo-kppl.png'],
+    ['name' => 'Dinas Perikanan dan Kelautan DIY',  'sector' => 'Maritime Productivity & Fisheries atau Ocean-Coastal Management',  'category' => 'government', 'logo' => 'dinkel-yogya.png'],
+    ['name' => 'Kementerian Dalam Negeri',  'sector' => 'Public Policy & Regional Development atau Disaster Mitigation Policy',  'category' => 'government', 'logo' => 'kemendagri.png'],
+    ['name' => 'Bank Indonesia',  'sector' => 'Economic Policy',  'category' => 'government', 'logo' => 'bank-indo.png'],
+
 ];
 
 $dss_list = [

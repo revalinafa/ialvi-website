@@ -37,7 +37,8 @@ include 'includes/header.php';
 
       <div class="people-grid">
         <?php foreach ($members as $person): ?>
-          <a href="person.php?slug=<?php echo urlencode($person['slug']); ?>" class="person-card">
+          <?php $has_url = !empty($person['url']); ?>
+          <<?php echo $has_url ? 'a' : 'div'; ?> class="person-card"<?php if ($has_url): ?> href="<?php echo htmlspecialchars($person['url']); ?>" target="_blank" rel="noopener"<?php endif; ?>>
             <div class="person-card__photo"
                  style="--photo-url: url('/assets/img/people/<?php echo htmlspecialchars($person['photo']); ?>');">
             </div>
@@ -48,7 +49,7 @@ include 'includes/header.php';
                 <p class="person-card__note"><?php echo htmlspecialchars($person['degree_note']); ?></p>
               <?php endif; ?>
             </div>
-          </a>
+          </<?php echo $has_url ? 'a' : 'div'; ?>>
         <?php endforeach; ?>
       </div>
     </div>
